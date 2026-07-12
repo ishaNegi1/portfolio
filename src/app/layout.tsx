@@ -1,19 +1,27 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "@/styles/animations.css";
 
 export const metadata: Metadata = {
-  title: "Isha Negi | Full Stack Developer",
+  metadataBase: new URL("https://your-domain.vercel.app"),
+
+  title: {
+    default: "Isha Negi | Full Stack Developer",
+    template: "%s | Isha Negi",
+  },
 
   description:
-    "Full Stack Developer specializing in React, Next.js, Node.js, PostgreSQL and AI-powered applications.",
+    "Full Stack Developer specializing in React, Next.js, Node.js, PostgreSQL and AI-powered web applications.",
 
   keywords: [
     "Isha Negi",
     "Portfolio",
     "Full Stack Developer",
-    "Next.js",
     "React",
+    "Next.js",
     "Node.js",
+    "PostgreSQL",
+    "AI",
     "TypeScript",
   ],
 
@@ -26,10 +34,41 @@ export const metadata: Metadata = {
   creator: "Isha Negi",
 
   openGraph: {
-    title: "Isha Negi Portfolio",
+    title: "Isha Negi | Full Stack Developer",
+
     description:
       "Modern Full Stack Developer Portfolio",
+
+    url: "https://your-domain.vercel.app",
+
+    siteName: "Isha Negi Portfolio",
+
+    locale: "en_US",
+
     type: "website",
+
+    images: [
+      {
+        url: "/og-image.png",
+
+        width: 1200,
+
+        height: 630,
+
+        alt: "Isha Negi Portfolio",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "Isha Negi | Full Stack Developer",
+
+    description:
+      "Modern Full Stack Developer Portfolio",
+
+    images: ["/og-image.png"],
   },
 
   icons: {
@@ -43,7 +82,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );
