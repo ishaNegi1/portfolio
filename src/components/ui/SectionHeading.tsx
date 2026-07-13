@@ -30,7 +30,7 @@ export default function SectionHeading({
       className="mb-16 text-center"
     >
       <h2 className="text-4xl font-bold md:text-5xl">
-        <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
+        <span className="bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
           {title}
         </span>
       </h2>

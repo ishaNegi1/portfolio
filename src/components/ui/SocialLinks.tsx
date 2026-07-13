@@ -52,7 +52,7 @@ export default function SocialLinks() {
 
         const content = (
           <Card className="flex items-center gap-5 p-5 transition-all hover:border-blue-500/40">
-            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-xl text-white">
+            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-r from-blue-500 to-purple-600 text-xl text-white">
               <Icon />
             </div>
 

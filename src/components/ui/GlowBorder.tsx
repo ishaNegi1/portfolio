@@ -15,8 +15,8 @@ export default function GlowBorder({
   return (
     <div
       className={cn(
-        "rounded-2xl p-[1px]",
-        "bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500",
+        "rounded-2xl p-px",
+        "bg-linear-to-br from-blue-500 via-indigo-500 to-purple-500",
         className
       )}
     >

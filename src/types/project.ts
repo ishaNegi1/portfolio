@@ -17,28 +17,16 @@ export interface ProjectTechStack {
 
 export interface Project {
   id: number;
-
   title: string;
-
   slug: string;
-
   image: string;
-
   category: string;
-
   shortDescription: string;
-
   description: string;
-
   techStack: ProjectTechStack;
-
   features: ProjectFeature[];
-
   challenges: string[];
-
   futureScope: string[];
-
   links: ProjectLink;
-
   featured: boolean;
 }

@@ -29,8 +29,7 @@ export default function useScrollSpy(sectionIds: string[]) {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () =>
-      window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [sectionIds]);
 
   return activeSection;

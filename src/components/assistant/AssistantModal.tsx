@@ -58,7 +58,7 @@ export default function AssistantModal({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-[90] bg-black/60 backdrop-blur-sm"
+            className="fixed inset-0 z-90 bg-black/60 backdrop-blur-sm"
           />
 
           {/* Chat Window */}
@@ -82,7 +82,7 @@ export default function AssistantModal({
             transition={{
               duration: 0.25,
             }}
-            className="fixed bottom-24 right-6 z-[100] flex h-[700px] w-[420px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#08111f] shadow-2xl max-md:bottom-0 max-md:right-0 max-md:h-screen max-md:w-full max-md:rounded-none"
+            className="fixed bottom-24 right-6 z-100 flex h-175 w-105 flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#08111f] shadow-2xl max-md:bottom-0 max-md:right-0 max-md:h-screen max-md:w-full max-md:rounded-none"
           >
             {/* Header */}
 

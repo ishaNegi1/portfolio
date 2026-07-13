@@ -39,11 +39,13 @@ export default function Contact() {
       throw new Error(result.message);
     }
 
-    reset();
-
     alert("Message sent successfully!");
-  } catch {
-    alert("Something went wrong.");
+
+    reset();
+  } catch (error) {
+    console.error(error);
+
+    alert("Failed to send message.");
   }
 };
 

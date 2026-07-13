@@ -1,9 +1,4 @@
-import {
-  pgTable,
-  serial,
-  varchar,
-  timestamp,
-} from "drizzle-orm/pg-core";
+import { pgTable, serial, varchar, timestamp } from "drizzle-orm/pg-core";
 
 export const visitors = pgTable("visitors", {
   id: serial("id").primaryKey(),
@@ -12,7 +7,5 @@ export const visitors = pgTable("visitors", {
     length: 255,
   }).notNull(),
 
-  createdAt: timestamp("created_at")
-    .defaultNow()
-    .notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
 });

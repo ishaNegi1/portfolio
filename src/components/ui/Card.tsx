@@ -37,7 +37,7 @@ export default function Card({
         "transition-all duration-300",
 
         glow &&
-          "before:absolute before:inset-0 before:rounded-2xl before:p-[1px] before:bg-gradient-to-br before:from-blue-500/40 before:via-indigo-500/30 before:to-purple-500/40 before:[mask-composite:exclude]",
+          "before:absolute before:inset-0 before:rounded-2xl before:p-px before:bg-linear-to-br before:from-blue-500/40 before:via-indigo-500/30 before:to-purple-500/40 before:mask-exclude",
 
         className
       )}

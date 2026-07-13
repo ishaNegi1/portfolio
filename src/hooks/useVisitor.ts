@@ -8,12 +8,9 @@ export default function useVisitor() {
   useEffect(() => {
     async function fetchVisitors() {
       try {
-        const response = await fetch(
-          "/api/visitors"
-        );
+        const response = await fetch("/api/visitors");
 
-        const data =
-          await response.json();
+        const data = await response.json();
 
         setCount(data.count);
       } catch {

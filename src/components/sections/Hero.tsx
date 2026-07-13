@@ -43,7 +43,7 @@ export default function Hero() {
             {PORTFOLIO.name}
           </h1>
 
-          <h2 className="mt-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-3xl font-bold text-transparent md:text-5xl">
+          <h2 className="mt-6 bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-3xl font-bold text-transparent md:text-5xl">
             {typingText}
 <span className="animate-pulse text-blue-400">|</span>
           </h2>

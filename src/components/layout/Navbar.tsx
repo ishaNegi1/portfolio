@@ -60,7 +60,7 @@ export default function Navbar() {
             onClick={() => handleNavigation("home")}
             className="text-2xl font-bold"
           >
-            <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
               {PORTFOLIO.name}
             </span>
           </button>

@@ -136,7 +136,7 @@ export default function About() {
         </h3>
 
         <div className="relative mx-auto max-w-5xl">
-          <div className="absolute left-4 top-0 h-full w-[2px] bg-gradient-to-b from-blue-500 via-indigo-500 to-purple-500 md:left-1/2 md:-translate-x-1/2" />
+          <div className="absolute left-4 top-0 h-full w-0.5 bg-linear-to-b from-blue-500 via-indigo-500 to-purple-500 md:left-1/2 md:-translate-x-1/2" />
 
           <div className="space-y-10">
             {timeline.map((item, index) => (
@@ -157,7 +157,7 @@ export default function About() {
               >
                 <div className="hidden md:block md:flex-1" />
 
-                <div className="z-10 h-5 w-5 rounded-full bg-gradient-to-r from-blue-500 to-purple-500" />
+                <div className="z-10 h-5 w-5 rounded-full bg-linear-to-r from-blue-500 to-purple-500" />
 
                 <div className="flex-1">
                   <Card className="p-6">

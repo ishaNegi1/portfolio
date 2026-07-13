@@ -62,7 +62,7 @@ export default function CertificateModal({
             transition={{
               duration: 0.25,
             }}
-            className="fixed left-1/2 top-1/2 z-[60] h-[90vh] w-[95%] max-w-6xl -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-3xl border border-white/10 bg-[#08111f]"
+            className="fixed left-1/2 top-1/2 z-60 h-[90vh] w-[95%] max-w-6xl -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-3xl border border-white/10 bg-[#08111f]"
           >
             {/* Header */}
 

@@ -17,7 +17,7 @@ export default function Achievements() {
 
       <div className="relative mx-auto max-w-6xl">
         {/* Timeline Line */}
-        <div className="absolute left-5 top-0 hidden h-full w-[2px] bg-gradient-to-b from-blue-500 via-indigo-500 to-purple-500 md:block lg:left-1/2 lg:-translate-x-1/2" />
+        <div className="absolute left-5 top-0 hidden h-full w-0.5 bg-linear-to-b from-blue-500 via-indigo-500 to-purple-500 md:block lg:left-1/2 lg:-translate-x-1/2" />
 
         <div className="space-y-12">
           {achievements.map((achievement, index) => {
@@ -51,7 +51,7 @@ export default function Achievements() {
                 <div className="flex-1 w-full">
                   <Card className="p-6">
                     <div className="mb-5 flex items-center gap-4">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 text-2xl text-white">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-br from-blue-500 to-purple-600 text-2xl text-white">
                         <Icon />
                       </div>
 
@@ -78,7 +78,7 @@ export default function Achievements() {
 
                 {/* Timeline Dot */}
 
-                <div className="z-10 hidden h-5 w-5 rounded-full border-4 border-[#050816] bg-gradient-to-r from-blue-500 to-purple-600 lg:block" />
+                <div className="z-10 hidden h-5 w-5 rounded-full border-4 border-[#050816] bg-linear-to-r from-blue-500 to-purple-600 lg:block" />
 
                 {/* Empty Side */}
 

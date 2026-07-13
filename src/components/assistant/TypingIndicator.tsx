@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function TypingIndicator() {
   return (
     <div className="flex items-center gap-3">
-      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-linear-to-r from-blue-500 to-purple-600 text-white">
         AI
       </div>
 
