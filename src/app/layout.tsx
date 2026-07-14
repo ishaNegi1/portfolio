@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "@/styles/animations.css";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://your-domain.vercel.app"),
@@ -83,7 +84,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>{children}</body>
+      <body>
+  {children}
+
+  <Toaster
+    richColors
+    position="top-right"
+    theme="dark"
+    closeButton
+  />
+</body>
     </html>
   );
 }
