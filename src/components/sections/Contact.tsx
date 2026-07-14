@@ -84,6 +84,7 @@ export default function Contact() {
                   {...register("name")}
                   className="w-full rounded-xl border border-white/10 bg-[#111827] px-5 py-4 outline-none transition focus:border-blue-500"
                   placeholder="Enter your name"
+                  required
                 />
               </div>
 
@@ -97,6 +98,7 @@ export default function Contact() {
                   type="email"
                   className="w-full rounded-xl border border-white/10 bg-[#111827] px-5 py-4 outline-none transition focus:border-blue-500"
                   placeholder="Enter your email"
+                  required
                 />
               </div>
 
@@ -110,6 +112,7 @@ export default function Contact() {
                   rows={6}
                   className="w-full resize-none rounded-xl border border-white/10 bg-[#111827] px-5 py-4 outline-none transition focus:border-blue-500"
                   placeholder="Write your message..."
+                  required
                 />
               </div>
 
