@@ -12,10 +12,7 @@ import {
 
 import { scrollToSection } from "@/lib/utils";
 import { PORTFOLIO } from "@/lib/constants";
-
 import Button from "@/components/ui/Button";
-import VisitorCounter from "@/components/ui/VisitorCounter";
-
 import navigation from "@/data/navigation";
 import social from "@/data/social";
 
@@ -82,7 +79,6 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden items-center gap-5 md:flex">
-            <VisitorCounter />
 
             <a
               href={social.github}
