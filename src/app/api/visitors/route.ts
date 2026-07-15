@@ -1,33 +1,13 @@
-import { NextRequest, NextResponse } from "next/server";
-import { eq, sql } from "drizzle-orm";
+import { NextResponse } from "next/server";
+import { sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { visitors } from "@/db/schema";
 
-import { hashIP } from "@/lib/visitor";
-
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
-    const forwarded =
-      request.headers.get("x-forwarded-for");
-
-    const ip =
-      forwarded?.split(",")[0].trim() ??
-      "unknown";
-
-    const ipHash = hashIP(ip);
-
-    const existing = await db
-      .select()
-      .from(visitors)
-      .where(eq(visitors.ipHash, ipHash))
-      .limit(1);
-
-    if (existing.length === 0) {
-      await db.insert(visitors).values({
-        ipHash,
-      });
-    }
+    // Count every visit
+    await db.insert(visitors).values({});
 
     const result = await db
       .select({
@@ -38,7 +18,9 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       count: Number(result[0].count),
     });
-  } catch {
+  } catch (error) {
+    console.error(error);
+
     return NextResponse.json(
       {
         count: 0,

@@ -65,7 +65,7 @@ export default function Navbar() {
             </span>
           </button>
 
-          <nav className="hidden items-center gap-8 lg:flex">
+          <nav className="hidden items-center gap-8 md:flex">
             {navigation.map((item) => (
               <button
                 key={item.id}
@@ -81,7 +81,7 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <div className="hidden items-center gap-5 lg:flex">
+          <div className="hidden items-center gap-5 md:flex">
             <VisitorCounter />
 
             <a
@@ -113,7 +113,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="text-2xl lg:hidden"
+            className="text-2xl md:hidden"
           >
             {mobileOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -135,7 +135,7 @@ export default function Navbar() {
               opacity: 0,
               y: -20,
             }}
-            className="fixed top-20 z-40 w-full border-b border-white/10 bg-[#050816] lg:hidden"
+            className="fixed top-20 z-40 w-full border-b border-white/10 bg-[#050816] md:hidden"
           >
             <div className="flex flex-col gap-6 p-6">
               {navigation.map((item) => (
