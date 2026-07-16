@@ -52,7 +52,7 @@ Frontend
 - React
 - Next.js
 - Tailwind CSS
-- Bootstrap
+- Chart.js
 - Redux Toolkit
 - Framer Motion
 
@@ -60,6 +60,7 @@ Backend
 
 - Node.js
 - Express.js
+- REST APIs
 
 Database
 
@@ -72,65 +73,55 @@ Programming
 
 - Java
 - Python
-- C++
 - JavaScript
 - TypeScript
+- SQL
 
 AI
 
 - OpenRouter
+- HuggingFace 
 - OpenAI APIs
 
 Tools
 
 - Git
 - GitHub
+- Figma
 - Postman
 - Vercel
 - Render
-- Drizzle ORM
+- VS Code
 
 ====================
 
 PROJECTS
 
-SpendWise
+SpendWise - AI-Powered Spending Analyzer & Personal Finance Insights Dashboard
 
-TripGenie
+TripGenie - AI-Powered Real-Time Collaborative Travel Planning Platform
 
-SustainaBite
+SustainaBite - Saving Food, Serving Hope
 
-Virtual Wardrobe
+NutriSense - AI-Powered Nutrition and Wellness Tracking Platform
 
 ====================
 
 CERTIFICATES
 
-IBM Agentic AI
+IBM Agentic AI: From Learner to Builder - Become an AI Agent Architect
 
-Web Development
-
-React
-
-Python
-
-Java
-
-SQL
+Graphs Camp Participation
 
 ====================
 
 ACHIEVEMENTS
 
-IBM AI Certification
+Research Papers
 
-Research Paper
+Smart Cities Waste Solution: An IoT-Enabled Public Dustbin with AI-Based Segregation, Self-Cleaning, and Incentivized Recycling
 
-Full Stack Projects
-
-Technical Society
-
-Academic Excellence
+NeuroGuardian: A Wearable System for Continuous Monitoring and Real-Time Reporting in ASD Children
 
 ====================
 

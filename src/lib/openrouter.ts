@@ -11,7 +11,7 @@ export async function askOpenRouter(systemPrompt: string, userPrompt: string) {
     },
 
     body: JSON.stringify({
-      model: "openai/gpt-4.1-mini",
+      model: "poolside/laguna-m.1:free",
 
       messages: [
         {
