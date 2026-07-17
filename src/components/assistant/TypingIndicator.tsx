@@ -1,15 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FaRobot } from "react-icons/fa";
 
 export default function TypingIndicator() {
   return (
     <div className="flex items-center gap-3">
-      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-linear-to-r from-blue-500 to-purple-600 text-white">
-        AI
+      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-r from-blue-500 to-purple-600 text-white">
+        <FaRobot />
       </div>
 
-      <div className="flex items-center gap-2 rounded-2xl rounded-bl-md border border-white/10 bg-[#111827] px-5 py-4">
+      <div className="flex items-center gap-2 rounded-2xl rounded-bl-md">
         {[0, 1, 2].map((item) => (
           <motion.span
             key={item}
@@ -21,7 +22,7 @@ export default function TypingIndicator() {
               duration: 0.8,
               delay: item * 0.15,
             }}
-            className="h-2.5 w-2.5 rounded-full bg-blue-400"
+            className="h-2 w-2 rounded-full bg-blue-400"
           />
         ))}
       </div>

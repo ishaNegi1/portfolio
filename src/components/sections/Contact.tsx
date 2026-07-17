@@ -74,7 +74,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="container my-30 bg-amber-400">
+    <div className="container my-30">
       <SectionHeading
         title="Contact"
         subtitle="Let's connect and discuss opportunities, collaborations or exciting ideas."
@@ -94,7 +94,7 @@ export default function Contact() {
             once: true,
           }}
         >
-          <Card className="p-8">
+          <Card className="p-6">
             <form
               autoComplete="off"
               onSubmit={handleSubmit(onSubmit)}
@@ -112,11 +112,11 @@ export default function Contact() {
                   autoComplete="off"
                   {...register("name")}
                   placeholder="Enter your name"
-                  className="w-full rounded-xl border border-white/10 bg-[#111827] px-5 py-4 outline-none transition focus:border-blue-500"
+                  className="w-full rounded-xl border border-white/10 bg-[#111827] p-3 text-sm outline-none transition focus:border-blue-500"
                 />
 
                 {errors.name && (
-                  <p className="mt-2 text-sm text-red-400">
+                  <p className="mt-2 text-sm text-red-500">
                     {errors.name.message}
                   </p>
                 )}
@@ -134,11 +134,11 @@ export default function Contact() {
                   autoComplete="off"
                   {...register("email")}
                   placeholder="Enter your email"
-                  className="w-full rounded-xl border border-white/10 bg-[#111827] px-5 py-4 outline-none transition focus:border-blue-500"
+                  className="w-full rounded-xl border border-white/10 bg-[#111827] p-3 text-sm outline-none transition focus:border-blue-500"
                 />
 
                 {errors.email && (
-                  <p className="mt-2 text-sm text-red-400">
+                  <p className="mt-2 text-sm text-red-500">
                     {errors.email.message}
                   </p>
                 )}
@@ -152,15 +152,15 @@ export default function Contact() {
                 </label>
 
                 <textarea
-                  rows={6}
+                  rows={4}
                   spellCheck={false}
                   {...register("message")}
                   placeholder="Write your message..."
-                  className="w-full resize-none rounded-xl border border-white/10 bg-[#111827] px-5 py-4 outline-none transition focus:border-blue-500"
+                  className="w-full resize-none rounded-xl border border-white/10 bg-[#111827] p-3 text-sm outline-none transition focus:border-blue-500"
                 />
 
                 {errors.message && (
-                  <p className="mt-2 text-sm text-red-400">
+                  <p className="mt-2 text-sm text-red-500">
                     {errors.message.message}
                   </p>
                 )}

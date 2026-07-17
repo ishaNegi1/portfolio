@@ -82,13 +82,13 @@ export default function AssistantModal({
             transition={{
               duration: 0.25,
             }}
-            className="fixed bottom-24 right-6 z-100 flex h-1/2 w-105 flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#08111f] shadow-2xl max-md:bottom-0 max-md:right-0 max-md:h-screen max-md:w-full max-md:rounded-none"
+            className="fixed bottom-20 sm:right-6 right-4 z-100 flex h-[75%] sm:w-[50%] w-[92%] flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#08111f] shadow-2xl"
           >
             {/* Header */}
 
             <div className="flex items-center justify-between border-b border-white/10 bg-[#0b1528] px-6 py-5">
               <div>
-                <h2 className="text-xl font-bold">
+                <h2 className=" text-lg font-bold">
                   AI Portfolio Assistant
                 </h2>
 
@@ -99,9 +99,9 @@ export default function AssistantModal({
 
               <button
                 onClick={onClose}
-                className="rounded-full p-2 transition hover:bg-white/10"
+                className="rounded-full p-2 transition bg-white/10 hover:bg-white/20"
               >
-                <FaTimes />
+                <FaTimes className=" h-5 w-5"/>
               </button>
             </div>
 

@@ -46,14 +46,14 @@ const socials = [
 
 export default function SocialLinks() {
   return (
-    <div className="space-y-5">
+    <div className=" flex flex-col gap-5 md:mt-16 mt-6">
       {socials.map((item) => {
         const Icon = item.icon;
 
         const content = (
-          <Card className="flex items-center gap-5 p-5 transition-all hover:border-blue-500/40">
-            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-r from-blue-500 to-purple-600 text-xl text-white">
-              <Icon />
+          <Card className="flex items-center gap-5 p-4 transition-all hover:border-blue-500/40">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-r from-blue-500 to-purple-600 text-xl text-white">
+              <Icon className=" h-6 w-6"/>
             </div>
 
             <div>

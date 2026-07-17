@@ -44,14 +44,15 @@ export default function ChatInput({
     setMessage(e.target.value)
   }
   placeholder="Ask me anything about Isha..."
-  className="flex-1 rounded-xl border border-white/10 bg-[#111827] px-4 py-3 outline-none transition focus:border-blue-500"
+  className="flex-1 rounded-xl border border-white/10 bg-[#111827] p-3 outline-none transition focus:border-blue-500 text-sm"
 />
 
         <Button
           type="submit"
           disabled={loading}
+          size="sm"
         >
-          <FaPaperPlane />
+          <FaPaperPlane className=" h-4 w-4"/>
         </Button>
       </div>
     </form>
