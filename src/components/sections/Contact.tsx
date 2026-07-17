@@ -74,7 +74,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="container">
+    <div className="container my-30 bg-amber-400">
       <SectionHeading
         title="Contact"
         subtitle="Let's connect and discuss opportunities, collaborations or exciting ideas."

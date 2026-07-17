@@ -27,7 +27,7 @@ export default function Navbar() {
       <motion.header
         initial={{ y: -80 }}
         animate={{ y: 0 }}
-        className="fixed left-0 top-0 z-50 w-full transition-all duration-300 border-b border-white/20 bg-[#050816]/80 backdrop-blur-xl"
+        className="fixed left-0 top-0 z-50 w-full transition-all duration-300 border-b-2 border-white/30 bg-[#050816]/80 backdrop-blur-xl"
       >
         <div className="flex h-20 max-w-7xl items-center justify-between mx-auto md:px-6 px-4">
           <button

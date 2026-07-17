@@ -37,8 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Isha Negi | Full Stack Developer",
 
-    description:
-      "Modern Full Stack Developer Portfolio",
+    description: "Modern Full Stack Developer Portfolio",
 
     url: "https://isha-negi.vercel.app/",
 
@@ -66,8 +65,7 @@ export const metadata: Metadata = {
 
     title: "Isha Negi | Full Stack Developer",
 
-    description:
-      "Modern Full Stack Developer Portfolio",
+    description: "Modern Full Stack Developer Portfolio",
 
     images: ["/og-image.png"],
   },
@@ -85,15 +83,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-  {children}
-
-  <Toaster
-    richColors
-    position="top-right"
-    theme="dark"
-    closeButton
-  />
-</body>
+        {children}
+        <Toaster richColors position="top-right" theme="dark" closeButton />
+      </body>
     </html>
   );
 }

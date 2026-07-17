@@ -1,11 +1,9 @@
 const social = {
   github: "https://github.com/ishaNegi1",
 
-  linkedin: "https://linkedin.com/in/your-linkedin",
+  linkedin: "https://www.linkedin.com/in/isha-negi-791a33296",
 
-  email: "your-email@example.com",
-
-  phone: "+91 XXXXXXXXXX",
+  email: "negi.isha98@gmail.com",
 
   location: "Delhi, India",
 };
