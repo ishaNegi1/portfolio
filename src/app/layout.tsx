@@ -4,7 +4,7 @@ import "@/styles/animations.css";
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-domain.vercel.app"),
+  metadataBase: new URL("https://isha-negi.vercel.app/"),
 
   title: {
     default: "Isha Negi | Full Stack Developer",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Full Stack Developer specializing in React, Next.js, Node.js, PostgreSQL and AI-powered web applications.",
+    "Full Stack Developer specializing in React.js, Next.js, Node.js, Database and AI-powered web applications.",
 
   keywords: [
     "Isha Negi",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     description:
       "Modern Full Stack Developer Portfolio",
 
-    url: "https://your-domain.vercel.app",
+    url: "https://isha-negi.vercel.app/",
 
     siteName: "Isha Negi Portfolio",
 

@@ -1,6 +1,5 @@
 "use client";
 
-import useTypewriter from "@/hooks/useTypewriter";
 import { motion } from "framer-motion";
 import { FaArrowRight, FaDownload } from "react-icons/fa";
 
@@ -11,13 +10,6 @@ import { PORTFOLIO } from "@/lib/constants";
 import { scrollToSection } from "@/lib/utils";
 
 export default function Hero() {
-
-  const typingText = useTypewriter([
-  "Full Stack Developer",
-  "AI Enthusiast",
-  "React Developer",
-  "Next.js Developer",
-]);
 
   return (
     <div className="container min-h-screen flex items-center">
@@ -43,9 +35,9 @@ export default function Hero() {
             {PORTFOLIO.name}
           </h1>
 
-          <h2 className="mt-6 bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-3xl font-bold text-transparent md:text-5xl">
-            {typingText}
-<span className="animate-pulse text-blue-400">|</span>
+          <h2 className="mt-6 bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-3xl font-bold text-transparent md:text-4xl">
+            Full Stack Developer
+
           </h2>
 
           <p className="mt-8 max-w-xl text-lg leading-8 text-slate-400">
