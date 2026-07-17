@@ -103,7 +103,7 @@ export default function Contact() {
               {/* Name */}
 
               <div>
-                <label className="mb-2 block text-sm font-medium">
+                <label className="mb-2 block text-base font-medium">
                   Name
                 </label>
 
@@ -125,7 +125,7 @@ export default function Contact() {
               {/* Email */}
 
               <div>
-                <label className="mb-2 block text-sm font-medium">
+                <label className="mb-2 block text-base font-medium">
                   Email
                 </label>
 
@@ -147,7 +147,7 @@ export default function Contact() {
               {/* Message */}
 
               <div>
-                <label className="mb-2 block text-sm font-medium">
+                <label className="mb-2 block text-base font-medium">
                   Message
                 </label>
 

@@ -5,19 +5,19 @@ import { PORTFOLIO } from "@/lib/constants";
 export default function Footer() {
   return (
     <footer className=" relative border-t-2 border-white/30 bg-[#050816]/80">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-6 py-10">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-6 py-10 px-7 sm:px-0">
         <div className="text-center">
-          <h3 className="font-semibold">
+          <h3 className="font-semibold text-base">
             {PORTFOLIO.name}
           </h3>
 
-          <p className="mt-1 text-sm text-slate-300">
+          <p className="mt-1 text-base text-slate-300">
             {PORTFOLIO.role}
           </p>
         </div>
 
         <div className=" text-center">
-          <p className="text-sm text-slate-300">
+          <p className="text-base text-slate-300">
           {PORTFOLIO.tagline}
           </p>
         </div>
@@ -29,7 +29,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="transition hover:text-blue-400"
           >
-            <FaGithub size={22} />
+            <FaGithub size={25} />
           </a>
 
           <a
@@ -38,7 +38,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="transition hover:text-blue-400"
           >
-            <FaLinkedin size={22} />
+            <FaLinkedin size={25} />
           </a>
           <a
             href={social.email}
@@ -46,7 +46,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="transition hover:text-blue-400"
           >
-            <FaEnvelope size={22} />
+            <FaEnvelope size={25} />
           </a>
         </div>
       </div>

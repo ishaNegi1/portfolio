@@ -86,7 +86,7 @@ export default function Navbar() {
                 <button
                   key={item.id}
                   onClick={() => handleNavigation(item.id)}
-                  className={`text-left ${
+                  className={`text-center text-base ${
                     active === item.id
                       ? "text-blue-400"
                       : "hover:text-slate-300 text-white"
