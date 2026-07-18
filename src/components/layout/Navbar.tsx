@@ -1,21 +1,16 @@
 "use client";
 
-import useScrollSpy from "@/hooks/useScrollSpy";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  FaBars,
-  FaTimes,
-} from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
+import useScrollSpy from "@/hooks/useScrollSpy";
 import { scrollToSection } from "@/lib/utils";
 import navigation from "@/data/navigation";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const active = useScrollSpy(
-  navigation.map((item) => item.id)
-);
+  const active = useScrollSpy(navigation.map((item) => item.id));
 
   const handleNavigation = (id: string) => {
     scrollToSection(id);
@@ -27,37 +22,45 @@ export default function Navbar() {
       <motion.header
         initial={{ y: -80 }}
         animate={{ y: 0 }}
-        className="fixed left-0 top-0 z-50 w-full transition-all duration-300 border-b-2 border-white/30 bg-[#050816]/80 backdrop-blur-xl"
+        transition={{ duration: 0.5 }}
+        className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#09090B]/80 backdrop-blur-2xl supports-backdrop-filter:bg-[#09090B]/70"
       >
-        <div className="flex h-20 max-w-7xl items-center justify-between mx-auto md:px-6 px-4">
-          <button
-            onClick={() => handleNavigation("home")}
-            className="text-2xl font-bold h-10.5 w-10.5 rounded-4xl bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500"
-          >
-            <span className=" bg-white bg-clip-text text-transparent">
-              IN
-            </span>
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
+          <button onClick={() => handleNavigation("home")} className="group flex items-center gap-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-linear-to-br from-[#9EF01A] via-[#70E000] to-[#38BDF8] shadow-[0_0_25px_rgba(158,240,26,.25)] transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+              <span className="text-lg font-black text-[#09090B]">IN</span>
+            </div>
+            <div className="hidden text-left md:block">
+              <p className="font-bold text-white">Isha Negi</p>
+              <p className="text-xs text-slate-300">Full Stack Developer</p>
+            </div>
           </button>
 
-          <nav className="hidden items-center gap-8 sm:flex">
-            {navigation.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavigation(item.id)}
-                className={`transition ${
-                  active === item.id
-                    ? "text-blue-400"
-                    : "hover:text-slate-300 text-white"
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
+          <nav className="hidden items-center gap-2 rounded-full border border-white/10 bg-[#18181B]/70 px-3 py-2 backdrop-blur-xl sm:flex">
+            {navigation.map((item) => {
+              const isActive = active === item.id;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavigation(item.id)}
+                  className={`relative rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 ${isActive ? "text-[#9EF01A]" : "text-slate-300 hover:bg-white/5 hover:text-[#38BDF8]"}`}
+                >
+                  {isActive && (
+                    <motion.span
+                      layoutId="navbar-pill"
+                      transition={{ type: "spring", stiffness: 400, damping: 35 }}
+                      className="absolute inset-0 rounded-full border border-[#9EF01A]/25 bg-[#9EF01A]/10"
+                    />
+                  )}
+                  <span className="relative z-10">{item.label}</span>
+                </button>
+              );
+            })}
           </nav>
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="text-2xl sm:hidden"
+            className="rounded-xl border border-white/10 bg-[#18181B] p-3 text-white transition hover:border-[#9EF01A]/40 hover:bg-[#232326] sm:hidden"
           >
             {mobileOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -67,36 +70,23 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{
-              opacity: 0,
-              y: -20,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            exit={{
-              opacity: 0,
-              y: -20,
-            }}
-            className="fixed top-20 z-40 w-full border-b border-white/10 bg-[#050816] sm:hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.25 }}
+            className="fixed left-0 top-20 z-40 w-full border-b border-white/10 bg-[#09090B]/95 backdrop-blur-2xl sm:hidden"
           >
-            <div className="flex flex-col gap-6 p-6">
+            <div className="flex flex-col gap-3 p-6">
               {navigation.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => handleNavigation(item.id)}
-                  className={`text-center text-lg ${
-                    active === item.id
-                      ? "text-blue-400"
-                      : "hover:text-slate-300 text-white"
-                  }`}
+                  className={`rounded-xl py-3 text-center text-lg font-medium transition-all ${active === item.id ? "bg-[#9EF01A]/15 text-[#9EF01A]" : "text-[#CBD5E1] hover:bg-white/5 hover:text-[#38BDF8]"}`}
                 >
                   {item.label}
                 </button>
               ))}
-
-              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

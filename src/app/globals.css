@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050816;
+  --background: #040404;
   --surface: #0f172a;
   --surface-light: #1e293b;
 
@@ -57,10 +57,10 @@ section {
   width: 100%;
 }
 
-.container {
+/* .container {
   width: min(1200px, calc(100% - 2rem));
   margin-inline: auto;
-}
+} */
 
 .section-title {
   font-size: clamp(2rem, 5vw, 3rem);
