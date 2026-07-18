@@ -57,7 +57,7 @@ export default function SocialLinks() {
             </div>
 
             <div>
-              <p className="text-sm text-slate-500">
+              <p className="text-base text-slate-500">
                 {item.title}
               </p>
 

@@ -5,7 +5,7 @@ import { FaDownload, FaRobot } from "react-icons/fa";
 import { useState } from "react";
 
 import Button from "@/components/ui/Button";
-import CodeWindow from "@/components/ui/CodeWindow";
+import CodeWindow from "../ui/CodeWindow";
 import AssistantModal from "../assistant/AssistantModal";
 
 import { PORTFOLIO } from "@/lib/constants";

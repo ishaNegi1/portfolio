@@ -1,7 +1,7 @@
 const social = {
   github: "https://github.com/ishaNegi1",
 
-  linkedin: "https://www.linkedin.com/in/isha-negi-791a33296",
+  linkedin: "https://linkedin.com/in/ishanegi1",
 
   email: "negi.isha98@gmail.com",
 

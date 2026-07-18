@@ -9,12 +9,15 @@ import Projects from "@/components/sections/Projects";
 import Achievements from "@/components/sections/Achievements";
 import Certificates from "@/components/sections/Certificates";
 import Contact from "@/components/sections/Contact";
+import AnimatedBackground from "@/components/background/AnimatedBackground";
 
 import AssistantButton from "@/components/assistant/AssistantButton";
 
 export default function HomePage() {
   return (
     <>
+<AnimatedBackground />
+
       <ScrollProgress />
 
       <Navbar />

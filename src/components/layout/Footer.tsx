@@ -4,7 +4,7 @@ import { PORTFOLIO } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className=" relative border-t-2 border-white/30 bg-[#050816]/80">
+    <footer className=" relative border-t-2 border-white/30 bg-[#050816]/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-6 py-10 px-7 sm:px-0">
         <div className="text-center">
           <h3 className="font-semibold text-base">
@@ -41,7 +41,8 @@ export default function Footer() {
             <FaLinkedin size={25} />
           </a>
           <a
-            href={social.email}
+          
+            href={`mailto:${social.email}`}
             target="_blank"
             rel="noopener noreferrer"
             className="transition hover:text-blue-400"

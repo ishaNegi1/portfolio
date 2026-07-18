@@ -103,7 +103,7 @@ export default function Contact() {
               {/* Name */}
 
               <div>
-                <label className="mb-2 block text-base font-medium">
+                <label className="mb-2 block text-lg font-medium">
                   Name
                 </label>
 
@@ -112,11 +112,11 @@ export default function Contact() {
                   autoComplete="off"
                   {...register("name")}
                   placeholder="Enter your name"
-                  className="w-full rounded-xl border border-white/10 bg-[#111827] p-3 text-sm outline-none transition focus:border-blue-500"
+                  className="w-full rounded-xl border border-white/10 bg-[#111827] p-3 text-base outline-none transition focus:border-blue-500"
                 />
 
                 {errors.name && (
-                  <p className="mt-2 text-sm text-red-500">
+                  <p className="mt-2 text-base text-red-400">
                     {errors.name.message}
                   </p>
                 )}
@@ -125,7 +125,7 @@ export default function Contact() {
               {/* Email */}
 
               <div>
-                <label className="mb-2 block text-base font-medium">
+                <label className="mb-2 block text-lg font-medium">
                   Email
                 </label>
 
@@ -134,11 +134,11 @@ export default function Contact() {
                   autoComplete="off"
                   {...register("email")}
                   placeholder="Enter your email"
-                  className="w-full rounded-xl border border-white/10 bg-[#111827] p-3 text-sm outline-none transition focus:border-blue-500"
+                  className="w-full rounded-xl border border-white/10 bg-[#111827] p-3 text-base outline-none transition focus:border-blue-500"
                 />
 
                 {errors.email && (
-                  <p className="mt-2 text-sm text-red-500">
+                  <p className="mt-2 text-base text-red-400">
                     {errors.email.message}
                   </p>
                 )}
@@ -147,7 +147,7 @@ export default function Contact() {
               {/* Message */}
 
               <div>
-                <label className="mb-2 block text-base font-medium">
+                <label className="mb-2 block text-lg font-medium">
                   Message
                 </label>
 
@@ -156,11 +156,11 @@ export default function Contact() {
                   spellCheck={false}
                   {...register("message")}
                   placeholder="Write your message..."
-                  className="w-full resize-none rounded-xl border border-white/10 bg-[#111827] p-3 text-sm outline-none transition focus:border-blue-500"
+                  className="w-full resize-none rounded-xl border border-white/10 bg-[#111827] p-3 text-base outline-none transition focus:border-blue-500"
                 />
 
                 {errors.message && (
-                  <p className="mt-2 text-sm text-red-500">
+                  <p className="mt-2 text-base text-red-400">
                     {errors.message.message}
                   </p>
                 )}
