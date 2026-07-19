@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   FaGithub,
   FaLinkedin,
@@ -18,6 +19,9 @@ const socials = [
     value: social.github.replace("https://github.com/", ""),
     icon: FaGithub,
     href: social.github,
+    color: "#9EF01A",
+    bg: "bg-[#9EF01A]/10",
+    border: "hover:border-[#9EF01A]/30",
   },
 
   {
@@ -28,6 +32,9 @@ const socials = [
     ),
     icon: FaLinkedin,
     href: social.linkedin,
+    color: "#38BDF8",
+    bg: "bg-[#38BDF8]/10",
+    border: "hover:border-[#38BDF8]/30",
   },
 
   {
@@ -35,37 +42,76 @@ const socials = [
     value: social.email,
     icon: FaEnvelope,
     href: `mailto:${social.email}`,
+    color: "#70E000",
+    bg: "bg-[#70E000]/10",
+    border: "hover:border-[#70E000]/30",
   },
 
   {
     title: "Location",
     value: social.location,
     icon: FaLocationDot,
+    color: "#F8FAFC",
+    bg: "bg-white/10",
   },
 ];
 
 export default function SocialLinks() {
   return (
-    <div className=" flex flex-col gap-5 md:mt-16 mt-6">
-      {socials.map((item) => {
+    <div className="mt-6 flex flex-col gap-5 lg:mt-0">
+      {socials.map((item, index) => {
         const Icon = item.icon;
 
         const content = (
-          <Card className="flex items-center gap-5 p-4 transition-all hover:border-blue-500/40">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-r from-blue-500 to-purple-600 text-xl text-white">
-              <Icon className=" h-6 w-6"/>
-            </div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: 25,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.45,
+              delay: index * 0.08,
+            }}
+          >
+            <Card
+              hover
+              className={`group flex items-center justify-between p-5 ${item.border ?? ""}`}
+            >
+              <div className="flex items-center gap-5">
+                {/* Icon */}
 
-            <div>
-              <p className="text-base text-slate-500">
-                {item.title}
-              </p>
+                <div
+                  className={`flex h-14 w-14 items-center justify-center rounded-2xl ${item.bg}`}
+                >
+                  <Icon
+                    className="text-2xl"
+                    style={{
+                      color: item.color,
+                    }}
+                  />
+                </div>
 
-              <p className="break-all font-medium">
-                {item.value}
-              </p>
-            </div>
-          </Card>
+                {/* Text */}
+
+                <div>
+                  <p className="text-sm uppercase tracking-wider text-slate-300">
+                    {item.title}
+                  </p>
+
+                  <p className="mt-1 font-medium text-[#F8FAFC] break-all">
+                    {item.value}
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </motion.div>
         );
 
         if (!item.href) {
@@ -81,6 +127,7 @@ export default function SocialLinks() {
             key={item.title}
             href={item.href}
             target="_blank"
+            className="block"
           >
             {content}
           </Link>

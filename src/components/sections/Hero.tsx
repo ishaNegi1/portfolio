@@ -12,11 +12,7 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative my-20 overflow-hidden sm:px-24 px-5 py-12 text-center sm:text-left">
-        {/* Background Glows */}
-        <div className="absolute -left-40 top-0 h-125 w-125 rounded-full bg-[#9EF01A]/15 blur-[170px]" />
-
-<div className="absolute -right-25 top-32 h-112.5 w-112.5 rounded-full bg-[#38BDF8]/12 blur-[180px]" />
+      <section className="relative my-20 overflow-hidden sm:px-20 px-5 py-12 text-center sm:text-left">
 
         <div className="relative grid items-center gap-20 lg:grid-cols-2">
           {/* Left Side */}

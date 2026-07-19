@@ -17,7 +17,7 @@ export default function SectionHeading({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6 }}
-      className="relative mb-20 flex flex-col items-center text-center"
+      className="relative mb-24 flex flex-col items-center text-center"
     >
       {/* Top Accent */}
       <motion.div
@@ -32,7 +32,7 @@ export default function SectionHeading({
       <div className="absolute top-4 h-24 w-72 rounded-full bg-[#9EF01A]/10 blur-3xl" />
 
       {/* Title */}
-      <h2 className="relative bg-linear-to-r from-[#9EF01A] via-[#70E000] to-[#38BDF8] bg-clip-text text-4xl font-black tracking-tight text-transparent md:text-5xl lg:text-6xl">
+      <h2 className="relative bg-linear-to-r from-[#9EF01A] via-[#70E000] to-[#38BDF8] bg-clip-text text-4xl font-black tracking-tight text-transparent md:text-5xl">
         {title}
       </h2>
 
@@ -52,7 +52,7 @@ export default function SectionHeading({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="relative mt-7 max-w-3xl text-base leading-8 text-[#94A3B8] md:text-lg"
+          className="relative mt-7 max-w-3xl text-base leading-8 text-slate-300 md:text-lg"
         >
           {subtitle}
         </motion.p>

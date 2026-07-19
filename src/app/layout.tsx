@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "@/styles/animations.css";
 import { Toaster } from "sonner";
+import BackgroundGlow from "@/components/ui/BackgroundGlow";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://isha-negi.vercel.app/"),
@@ -83,6 +84,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        <BackgroundGlow />
         {children}
         <Toaster richColors position="top-right" theme="dark" closeButton />
       </body>

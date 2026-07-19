@@ -6,6 +6,7 @@ import {
   FaLaptopCode,
   FaBrain,
   FaRocket,
+  FaCode,
 } from "react-icons/fa";
 
 import Card from "@/components/ui/Card";
@@ -55,7 +56,7 @@ const timeline = [
     year: "2025",
     title: "Full Stack & AI",
     description:
-      "Worked on MERN applications, AI-powered solutions and research projects.",
+      "Worked on full-stack applications, AI-powered solutions and research projects.",
   },
   {
     year: "2026",
@@ -67,118 +68,359 @@ const timeline = [
 
 export default function About() {
   return (
-    <div className="container">
-      <SectionHeading
-        title="About Me"
-        subtitle="Passionate Full Stack Developer dedicated to building scalable, performant and user-friendly web applications."
-      />
+    <section className="relative sm:px-20 px-5 py-3">
+      <div className="container">
 
-      <div className="grid gap-14 lg:grid-cols-2">
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          <h3 className="mb-6 text-3xl font-bold">
-            Turning Ideas Into Digital Products
-          </h3>
+        <SectionHeading
+          title="About Me"
+          subtitle="Passionate Full Stack Developer dedicated to building scalable, performant and user-friendly web applications."
+        />
 
-          <div className="space-y-6 text-slate-400 leading-8">
-            <p>
-              I'm a Full Stack Developer passionate about designing and
-              developing modern web applications with clean architecture,
-              responsive interfaces and scalable backend systems.
-            </p>
+        <div className="grid items-center gap-14 lg:grid-cols-2">
 
-            <p>
-              My interests include Full Stack Development, Artificial
-              Intelligence, API Development, UI/UX Design and building
-              real-world solutions that solve meaningful problems.
-            </p>
+          {/* LEFT SIDE */}
 
-            <p>
-              I enjoy learning new technologies and continuously improving my
-              development workflow while writing clean, maintainable and
-              production-ready code.
-            </p>
-          </div>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <Card className="relative overflow-hidden p-6">
 
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="grid gap-5 sm:grid-cols-2"
-        >
-          {highlights.map((item) => (
-            <Card key={item.title} className="p-6">
-              <div className="mb-5 text-3xl text-blue-400">
-                {item.icon}
+              {/* Glow */}
+
+              <div className="absolute -left-20 -top-20 h-60 w-60 rounded-full bg-[#9EF01A]/10 blur-[100px]" />
+
+              <div className="absolute -right-20 bottom-0 h-60 w-60 rounded-full bg-[#38BDF8]/10 blur-[120px]" />
+
+              <div className="relative">
+
+                {/* Badge */}
+
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#9EF01A]/20 bg-[#9EF01A]/10 px-4 py-2 text-sm font-medium text-[#9EF01A]">
+
+                  <span className="h-2 w-2 rounded-full bg-[#9EF01A]" />
+
+                  Available for Work
+
+                </div>
+
+                {/* Heading */}
+
+                <h3 className="mt-8 text-3xl font-black leading-tight text-white">
+
+                  Turning{" "}
+
+                  <span className="bg-linear-to-r from-[#9EF01A] via-[#70E000] to-[#38BDF8] bg-clip-text text-transparent">
+
+                    Ideas{" "}
+
+                  </span>
+
+                  Into Digital Products
+
+                </h3>
+
+                {/* Description */}
+
+                <div className="mt-8 space-y-6 text-lg leading-9 text-slate-300">
+
+                  <p>
+                    I'm a{" "}
+                    <span className="font-semibold text-[#F8FAFC]">
+                      Full Stack Developer
+                    </span>{" "}
+                    passionate about building scalable web applications,
+                    intuitive user experiences and modern backend systems.
+                  </p>
+
+                  <p>
+                    My primary interests include{" "}
+                      AI
+                    , API development, UI/UX and creating
+                    software that solves real-world problems.
+                  </p>
+
+                  <p>
+                    I enjoy transforming ideas into production-ready products
+                    while continuously learning new technologies and writing
+                    clean, maintainable code.
+                  </p>
+
+                </div>
+
+                {/* Divider */}
+
+                <div className="my-5 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
+
+                {/* Stats */}
+
+                <div className="grid grid-cols-2 gap-5">
+
+                  {[
+                    {
+                      number: "12+",
+                      label: "Projects",
+                    },
+                    {
+                      number: "10+",
+                      label: "Technologies",
+                    },
+                  ].map((item) => (
+                    <div
+                      key={item.label}
+                      className="rounded-2xl flex flex-col justify-center items-center border border-white/10 bg-white/2 p-5 text-center transition-all duration-300 hover:border-[#9EF01A]/20 hover:bg-white/4"
+                    >
+                      <h4 className="text-2xl font-black text-[#9EF01A]">
+                        {item.number}
+                      </h4>
+
+                      <p className="mt-2 text-base text-slate-300">
+                        {item.label}
+                      </p>
+                    </div>
+                  ))}
+
+                </div>
+
+                {/* CTA */}
+
+                <div className="mt-7 inline-flex items-center gap-3 font-medium text-[#9EF01A]">
+
+                  <FaCode />
+
+                  Crafting clean code & meaningful experiences
+
+
+                </div>
+
               </div>
 
-              <h4 className="mb-3 text-xl font-semibold">
+            </Card>
+
+          </motion.div>
+          
+          {/* RIGHT SIDE */}
+
+<motion.div
+  initial={{ opacity: 0, x: 50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.7 }}
+  className="grid sm:gap-6 gap-8 sm:grid-cols-2"
+>
+  {highlights.map((item, index) => (
+    <motion.div
+      key={item.title}
+      initial={{
+        opacity: 0,
+        y: 30,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+      }}
+      transition={{
+        delay: index * 0.12,
+        duration: 0.5,
+      }}
+    >
+      <Card
+        hover
+        glow
+        className="group relative h-full overflow-hidden p-5"
+      >
+        {/* Glow */}
+
+        <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[#9EF01A]/5 blur-[90px] transition-all duration-500 group-hover:bg-[#9EF01A]/10" />
+
+        <div className="absolute -bottom-10 -left-10 h-36 w-36 rounded-full bg-[#38BDF8]/5 blur-[90px] transition-all duration-500 group-hover:bg-[#38BDF8]/10" />
+
+        <div className="relative">
+
+          {/* Icon */}
+
+          <div className="mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-[#9EF01A]/20 via-[#70E000]/10 to-[#38BDF8]/20 text-3xl text-[#9EF01A] transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+
+            {item.icon}
+
+          </div>
+
+          {/* Title */}
+
+          <h4 className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-[#9EF01A]">
+
+            {item.title}
+
+          </h4>
+
+          {/* Divider */}
+
+          <div className="my-5 h-px w-14 bg-linear-to-r from-[#9EF01A] to-transparent transition-all duration-500 group-hover:w-24" />
+
+          {/* Description */}
+
+          <p className="leading-7 text-slate-300">
+
+            {item.description}
+
+          </p>
+
+        </div>
+
+      </Card>
+    </motion.div>
+  ))}
+</motion.div>
+</div>
+
+
+{/* JOURNEY */}
+
+<div className=" mt-28">
+
+  <motion.div
+    initial={{
+      opacity: 0,
+      y: 30,
+    }}
+    whileInView={{
+      opacity: 1,
+      y: 0,
+    }}
+    viewport={{
+      once: true,
+    }}
+    transition={{
+      duration: .6,
+    }}
+  >
+    <h3 className="text-center text-4xl font-black bg-linear-to-r from-[#9EF01A] via-[#70E000] to-[#38BDF8] bg-clip-text text-transparent">
+
+      My Journey
+
+    </h3>
+
+    <p className="mx-auto mt-4 max-w-2xl text-center leading-8 text-slate-300">
+
+      Every project, challenge and achievement has shaped my
+      journey into becoming a better developer.
+
+    </p>
+
+  </motion.div>
+
+  <div className="relative mx-auto mt-20 max-w-6xl">
+
+  {/* Vertical Line */}
+
+  <div className="absolute left-5 top-0 h-full w-0.5 bg-linear-to-b from-[#9EF01A] via-[#70E000] to-[#38BDF8] md:left-1/2 md:-translate-x-1/2" />
+
+  <div className=" sm:space-y-10 space-y-14">
+
+    {timeline.map((item, index) => (
+      <motion.div
+        key={item.year}
+        initial={{
+          opacity: 0,
+          y: 50,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: true,
+        }}
+        transition={{
+          duration: .6,
+          delay: index * .12,
+        }}
+        className={`relative flex items-center ${
+          index % 2 === 0
+            ? "md:flex-row"
+            : "md:flex-row-reverse"
+        } gap-8`}
+      >
+
+        {/* Empty Side */}
+
+        <div className="hidden md:block md:flex-1" />
+
+        {/* Timeline Node */}
+
+        <div className="absolute left-5 z-20 -translate-x-1/2 md:left-1/2">
+
+          <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#09090B]">
+
+            <div className="h-4 w-4 rounded-full bg-linear-to-r from-[#9EF01A] via-[#70E000] to-[#38BDF8] shadow-[0_0_20px_rgba(158,240,26,.7)]" />
+
+          </div>
+
+        </div>
+
+        {/* Card */}
+
+        <div className="ml-14 flex-1 md:ml-0">
+
+          <Card
+            hover
+            glow
+            className="group relative overflow-hidden p-5"
+          >
+
+            {/* Hover Glow */}
+
+            <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-[#9EF01A]/5 blur-[120px] transition-all duration-500 group-hover:bg-[#9EF01A]/10" />
+
+            <div className="absolute -bottom-16 -left-16 h-44 w-44 rounded-full bg-[#38BDF8]/5 blur-[120px] transition-all duration-500 group-hover:bg-[#38BDF8]/10" />
+
+            <div className="relative">
+
+              {/* Year */}
+
+              <span className="inline-flex rounded-full border border-[#9EF01A]/20 bg-[#9EF01A]/10 px-4 py-2 text-sm font-semibold text-[#9EF01A]">
+
+                {item.year}
+
+              </span>
+
+              {/* Title */}
+
+              <h4 className="mt-3 text-xl font-bold text-white transition-colors duration-300 group-hover:text-[#9EF01A]">
+
                 {item.title}
+
               </h4>
 
-              <p className="text-sm leading-7 text-slate-400">
+              {/* Divider */}
+
+              {/* Description */}
+
+              <p className="leading-8 text-slate-300 mt-2">
+
                 {item.description}
+
               </p>
-            </Card>
-          ))}
-        </motion.div>
-      </div>
 
-      <div className="mt-24">
-        <h3 className="mb-12 text-center text-3xl font-bold">
-          My Journey
-        </h3>
+            </div>
 
-        <div className="relative mx-auto max-w-5xl">
-          <div className="absolute left-4 top-0 h-full w-0.5 bg-linear-to-b from-blue-500 via-indigo-500 to-purple-500 md:left-1/2 md:-translate-x-1/2" />
+          </Card>
 
-          <div className="space-y-10">
-            {timeline.map((item, index) => (
-              <motion.div
-                key={item.year}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  delay: index * 0.15,
-                  duration: 0.5,
-                }}
-                className={`flex ${
-                  index % 2 === 0
-                    ? "md:flex-row"
-                    : "md:flex-row-reverse"
-                } items-center gap-8`}
-              >
-                <div className="hidden md:block md:flex-1" />
-
-                <div className="z-10 h-5 w-5 rounded-full bg-linear-to-r from-blue-500 to-purple-500" />
-
-                <div className="flex-1">
-                  <Card className="p-6">
-                    <span className="text-blue-400 font-semibold">
-                      {item.year}
-                    </span>
-
-                    <h4 className="mt-2 text-xl font-bold">
-                      {item.title}
-                    </h4>
-
-                    <p className="mt-3 text-slate-400 leading-7">
-                      {item.description}
-                    </p>
-                  </Card>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
-      </div>
-    </div>
-  );
+
+      </motion.div>
+    ))}
+
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+ );
 }

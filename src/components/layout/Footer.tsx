@@ -10,7 +10,7 @@ import { PORTFOLIO } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-[#09090B]">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-[#09090B] mt-12">
       {/* Background Glow */}
       <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-r from-[#9EF01A]/10 via-[#70E000]/5 to-[#38BDF8]/10 blur-3xl" />
 
