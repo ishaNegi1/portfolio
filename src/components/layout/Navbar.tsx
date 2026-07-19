@@ -26,17 +26,14 @@ export default function Navbar() {
         className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#09090B]/80 backdrop-blur-2xl supports-backdrop-filter:bg-[#09090B]/70"
       >
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
-          <button onClick={() => handleNavigation("home")} className="group flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-linear-to-br from-[#9EF01A] via-[#70E000] to-[#38BDF8] shadow-[0_0_25px_rgba(158,240,26,.25)] transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
-              <span className="text-lg font-black text-[#09090B]">IN</span>
-            </div>
-            <div className="hidden text-left md:block">
-              <p className="font-bold text-white">Isha Negi</p>
+          <button onClick={() => handleNavigation("home")}>
+            <div className=" text-left">
+              <p className="bg-linear-to-b from-[#9EF01A] via-[#70E000] to-[#38BDF8] bg-clip-text font-black leading-tight text-transparent">Isha Negi</p>
               <p className="text-xs text-slate-300">Full Stack Developer</p>
             </div>
           </button>
 
-          <nav className="hidden items-center gap-2 rounded-full border border-white/10 bg-[#18181B]/70 px-3 py-2 backdrop-blur-xl sm:flex">
+          <nav className="hidden items-center gap-2 rounded-full border border-white/10 bg-[#18181B]/70 px-3 py-2 backdrop-blur-xl md:flex">
             {navigation.map((item) => {
               const isActive = active === item.id;
               return (
@@ -60,7 +57,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="rounded-xl border border-white/10 bg-[#18181B] p-3 text-white transition hover:border-[#9EF01A]/40 hover:bg-[#232326] sm:hidden"
+            className="rounded-xl border border-white/10 bg-[#18181B] p-3 text-white transition hover:border-[#9EF01A]/40 hover:bg-[#232326] md:hidden"
           >
             {mobileOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -74,7 +71,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25 }}
-            className="fixed left-0 top-20 z-40 w-full border-b border-white/10 bg-[#09090B]/95 backdrop-blur-2xl sm:hidden"
+            className="fixed left-0 top-20 z-40 w-full border-b border-white/10 bg-[#09090B]/95 backdrop-blur-2xl md:hidden"
           >
             <div className="flex flex-col gap-3 p-6">
               {navigation.map((item) => (

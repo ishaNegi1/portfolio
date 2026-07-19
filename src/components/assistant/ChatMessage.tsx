@@ -32,7 +32,7 @@ export default function ChatMessage({
       }`}
     >
       {!isUser && (
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-linear-to-r from-blue-500 to-purple-600 text-white">
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-[#9EF01A] via-[#70E000] to-[#38BDF8] text-[#09090B]">
           <FaRobot/>
         </div>
       )}
@@ -40,8 +40,8 @@ export default function ChatMessage({
       <div
         className={`max-w-[80%] rounded-2xl p-3 text-base leading-7 ${
           isUser
-            ? "rounded-br-md bg-linear-to-r from-blue-600 to-purple-600 text-white"
-            : "rounded-bl-md border border-white/10 bg-[#111827] text-slate-200"
+            ? "rounded-br-md bg-linear-to-r from-[#9EF01A] via-[#70E000] to-[#38BDF8] text-[#09090B]"
+            : "rounded-bl-md border border-[#9EF01A]/20 bg-[#111111]/90 text-slate-200"
         }`}
       >
         <p className="whitespace-pre-wrap wrap-break-word text-base">
@@ -50,7 +50,7 @@ export default function ChatMessage({
       </div>
 
       {isUser && (
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-slate-700 text-white">
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-slate-700 text-white border border-[#9EF01A]">
           <FaUser />
         </div>
       )}

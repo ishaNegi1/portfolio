@@ -47,7 +47,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             "px-8 py-4 text-lg",
 
           variant === "primary" &&
-            "bg-linear-to-r from-blue-500 via-indigo-500 to-purple-500 text-white shadow-lg hover:shadow-blue-500/30",
+            "bg-linear-to-br from-[#9EF01A] via-[#70E000] to-[#38BDF8] text-[#09090B] shadow-lg hover:shadow-blue-500/30",
 
           variant === "secondary" &&
             "bg-slate-800 text-white border border-slate-700 hover:bg-slate-700",

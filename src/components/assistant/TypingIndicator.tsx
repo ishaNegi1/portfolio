@@ -6,7 +6,7 @@ import { FaRobot } from "react-icons/fa";
 export default function TypingIndicator() {
   return (
     <div className="flex items-center gap-3">
-      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-r from-blue-500 to-purple-600 text-white">
+      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-r from-[#9EF01A] via-[#70E000] to-[#38BDF8] text-[#09090B] ">
         <FaRobot />
       </div>
 
@@ -22,7 +22,7 @@ export default function TypingIndicator() {
               duration: 0.8,
               delay: item * 0.15,
             }}
-            className="h-2 w-2 rounded-full bg-blue-400"
+            className="h-2 w-2 rounded-full bg-[#38BDF8]"
           />
         ))}
       </div>

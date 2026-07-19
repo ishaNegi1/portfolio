@@ -131,12 +131,13 @@ section {
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(
-    #3b82f6,
-    #8b5cf6
+    #9EF01A,
+    #38BDF8
   );
   border-radius: 999px;
 }
 
+
 ::-webkit-scrollbar-track {
-  background: #0b1120;
+  background: #18181B ;
 }

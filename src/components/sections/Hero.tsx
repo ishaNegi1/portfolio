@@ -57,7 +57,7 @@ export default function Hero() {
             <div className="mt-12 flex flex-wrap gap-5 justify-center items-center sm:justify-start">
               <button
                 onClick={() => setOpen(true)}
-                className="group inline-flex items-center rounded-xl bg-linear-to-r from-[#9EF01A] via-[#70E000] to-[#38BDF8] px-3 py-2 font-semibold text-[#09090B] shadow-[0_0_35px_rgba(158,240,26,.30)] transition-all duration-300 hover:scale-105 hover:brightness-110"
+                className="group inline-flex items-center rounded-xl bg-linear-to-br from-[#9EF01A] via-[#70E000] to-[#38BDF8] px-4 py-3 font-semibold text-[#09090B] shadow-[0_0_35px_rgba(158,240,26,.30)] transition-all duration-300 hover:scale-105 hover:brightness-110"
               >
                 <FaRobot className="mr-3 transition-transform duration-300 group-hover:rotate-12 h-6 w-6" />
                 AI Assistant
@@ -67,7 +67,7 @@ export default function Hero() {
                 href={PORTFOLIO.resume}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center rounded-xl border border-[#9EF01A]/25 bg-[#18181B] px-3 py-2 font-semibold text-white transition-all duration-300 hover:border-[#9EF01A] hover:bg-[#232326]"
+                className="group inline-flex items-center rounded-xl border border-[#9EF01A]/25 bg-[#18181B] px-4 py-3 font-semibold text-white transition-all duration-300 hover:border-[#9EF01A] hover:bg-[#232326] hover:scale-105 hover:brightness-110"
               >
                 <FaDownload className="mr-3 transition-transform duration-300 group-hover:-translate-y-1" />
                 Resume

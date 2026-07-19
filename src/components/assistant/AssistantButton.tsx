@@ -19,7 +19,7 @@ export default function AssistantButton() {
           scale: 0.95,
         }}
         onClick={() => setOpen(true)}
-        className="fixed bottom-24 right-8 z-50 flex h-18 w-18 items-center justify-center rounded-full bg-linear-to-r from-blue-600 to-purple-600 text-2xl text-white shadow-2xl"
+        className="fixed bottom-24 right-8 z-50 flex h-18 w-18 items-center justify-center rounded-full bg-linear-to-br from-[#9EF01A] via-[#70E000] to-[#38BDF8] text-2xl text-[#09090B] shadow-2xl"
       >
         <FaRobot className=" h-9 w-9"/>
       </motion.button>

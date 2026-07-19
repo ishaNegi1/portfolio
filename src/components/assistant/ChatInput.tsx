@@ -44,7 +44,7 @@ export default function ChatInput({
     setMessage(e.target.value)
   }
   placeholder="Ask me anything about Isha..."
-  className="flex-1 rounded-xl border border-white/10 bg-[#111827] p-3 outline-none transition focus:border-blue-500 text-sm"
+  className="flex-1 rounded-xl border border-white/10 bg-[#18181B]/95 p-3 outline-none transition focus:border-[#9EF01A]/20 text-sm"
 />
 
         <Button

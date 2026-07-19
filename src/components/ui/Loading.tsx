@@ -14,7 +14,7 @@ export default function Loading() {
           duration: 1,
           ease: "linear",
         }}
-        className="h-10 w-10 rounded-full border-4 border-blue-500 border-t-transparent"
+        className="h-10 w-10 rounded-full border-4 border-[#38BDF8] border-t-transparent"
       />
     </div>
   );
