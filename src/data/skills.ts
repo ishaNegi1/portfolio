@@ -8,6 +8,7 @@ import {
   FaJava,
   FaPython,
   FaFigma,
+  FaDatabase
 } from "react-icons/fa";
 
 import {
@@ -22,16 +23,12 @@ import {
   SiMongodb,
   SiMysql,
   SiSupabase,
-  SiFirebase,
-  SiDrizzle,
   SiPostman,
   SiVercel,
   SiRender,
-  SiCloudinary,
   SiFramer,
+  SiChartdotjs
 } from "react-icons/si";
-
-import { TbBrandCpp } from "react-icons/tb";
 
 import { SkillCategory } from "@/types/skill";
 
@@ -41,44 +38,36 @@ const skills: SkillCategory[] = [
     skills: [
       { name: "HTML5", icon: FaHtml5 },
       { name: "CSS3", icon: FaCss3Alt },
-      { name: "JavaScript", icon: SiJavascript },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "React", icon: FaReact },
+      { name: "React.js", icon: FaReact },
       { name: "Next.js", icon: SiNextdotjs },
       { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "Bootstrap", icon: SiBootstrap },
       { name: "Redux Toolkit", icon: SiRedux },
+      { name: "Chart.js", icon: SiChartdotjs },
       { name: "Framer Motion", icon: SiFramer },
     ],
   },
 
   {
-    title: "Backend",
+    title: "Backend & Database",
     skills: [
       { name: "Node.js", icon: FaNodeJs },
       { name: "Express.js", icon: SiExpress },
       { name: "REST APIs", icon: SiPostman },
-      { name: "Cloudinary", icon: SiCloudinary },
-    ],
-  },
-
-  {
-    title: "Databases",
-    skills: [
-      { name: "PostgreSQL", icon: SiPostgresql },
+       { name: "PostgreSQL", icon: SiPostgresql },
       { name: "MongoDB", icon: SiMongodb },
       { name: "MySQL", icon: SiMysql },
       { name: "Supabase", icon: SiSupabase },
-      { name: "Firebase", icon: SiFirebase },
     ],
   },
 
   {
     title: "Programming Languages",
     skills: [
-      { name: "Java", icon: FaJava },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "JavaScript", icon: SiJavascript },
       { name: "Python", icon: FaPython },
-      { name: "C++", icon: TbBrandCpp },
+      { name: "Java", icon: FaJava },
+      { name: "SQL", icon: FaDatabase },
     ],
   },
 
@@ -88,10 +77,9 @@ const skills: SkillCategory[] = [
       { name: "Git", icon: FaGitAlt },
       { name: "GitHub", icon: FaGithub },
       { name: "Postman", icon: SiPostman },
-      { name: "Drizzle ORM", icon: SiDrizzle },
+      { name: "Figma", icon: FaFigma },
       { name: "Vercel", icon: SiVercel },
       { name: "Render", icon: SiRender },
-      { name: "Figma", icon: FaFigma },
     ],
   },
 ];

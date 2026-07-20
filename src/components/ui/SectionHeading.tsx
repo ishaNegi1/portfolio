@@ -17,7 +17,7 @@ export default function SectionHeading({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6 }}
-      className="relative mb-24 flex flex-col items-center text-center"
+      className="relative sm:mb-24 mb-20 flex flex-col items-center text-center"
     >
       {/* Top Accent */}
       <motion.div

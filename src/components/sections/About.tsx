@@ -69,7 +69,6 @@ const timeline = [
 export default function About() {
   return (
     <section className="relative sm:px-20 px-5 py-3">
-      <div className="container">
 
         <SectionHeading
           title="About Me"
@@ -124,7 +123,7 @@ export default function About() {
 
                 {/* Description */}
 
-                <div className="mt-8 space-y-6 text-lg leading-9 text-slate-300">
+                <div className="mt-8 space-y-6 text-base leading-9 text-slate-300">
 
                   <p>
                     I'm a{" "}
@@ -208,7 +207,7 @@ export default function About() {
   whileInView={{ opacity: 1, x: 0 }}
   viewport={{ once: true }}
   transition={{ duration: 0.7 }}
-  className="grid sm:gap-6 gap-8 sm:grid-cols-2"
+  className="grid gap-10 sm:grid-cols-2"
 >
   {highlights.map((item, index) => (
     <motion.div
@@ -281,7 +280,7 @@ export default function About() {
 
 {/* JOURNEY */}
 
-<div className=" mt-28">
+<div className=" mt-24 sm:mt-28">
 
   <motion.div
     initial={{
@@ -420,7 +419,7 @@ export default function About() {
 </div>
 
 </div>
-</div>
+
 </section>
  );
 }

@@ -88,14 +88,14 @@ export default function Contact() {
   return (
     <section className="relative overflow-hidden sm:px-20 px-5 py-12 my-20">
 
-      <div className="container relative z-10">
+      <div className="relative z-10">
 
         <SectionHeading
           title="Let's Connect"
           subtitle="Have a project in mind, an exciting opportunity, or just want to say hello? I'd love to hear from you."
         />
 
-        <div className="grid gap-10 lg:grid-cols-[1.2fr_.8fr]">
+        <div className="grid gap-14 lg:grid-cols-[1.2fr_.8fr]">
 
           {/* CONTACT FORM */}
 
@@ -298,7 +298,7 @@ export default function Contact() {
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
   transition={{ duration: 0.6, delay: 0.2 }}
-  className="mt-12"
+  className="mt-14"
 >
   <Card className="relative w-full overflow-hidden rounded-3xl border border-[#9EF01A]/15 bg-linear-to-br from-[#18181B] via-[#1D1D20] to-[#18181B] p-10">
 

@@ -1,94 +1,176 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  FaStar,
+  FaRocket,
+  FaUsers,
+} from "react-icons/fa";
 
 import SectionHeading from "@/components/ui/SectionHeading";
-import Button from "@/components/ui/Button";
-
 import ProjectCard from "@/components/project/ProjectCard";
-import ProjectModal from "@/components/project/ProjectModal";
 
 import projects from "@/data/projects";
 
-import { Project } from "@/types/project";
-
 const filters = [
-  "All",
-  "Full Stack",
-  "AI",
+  {
+    label: "Featured",
+    icon: FaStar,
+  },
+  {
+    label: "Others",
+    icon: FaRocket,
+  },
+  {
+    label: "Team",
+    icon: FaUsers,
+  },
 ];
 
 export default function Projects() {
   const [selectedFilter, setSelectedFilter] =
-    useState("All");
-
-  const [selectedProject, setSelectedProject] =
-    useState<Project | null>(null);
+    useState("Featured");
 
   const filteredProjects = useMemo(() => {
-    if (selectedFilter === "All") {
-      return projects;
-    }
-
     return projects.filter(
-      (project) =>
-        project.category === selectedFilter
+      (project) => project.category === selectedFilter
     );
   }, [selectedFilter]);
 
   return (
-    <div className="container">
+    <section
+      id="projects"
+      className="sm:px-20 px-5 py-1"
+    >
       <SectionHeading
         title="Projects"
-        subtitle="A collection of projects that showcase my experience in Full Stack Development, Artificial Intelligence and modern web technologies."
+        subtitle="A selection of projects showcasing my experience in full-stack development, artificial intelligence, and modern web technologies."
       />
 
-      {/* Filters */}
+      {/* Filter Tabs */}
 
-      <div className="mb-14 flex flex-wrap justify-center gap-4">
-        {filters.map((filter) => (
-          <Button
-            key={filter}
-            size="sm"
-            variant={
-              selectedFilter === filter
-                ? "primary"
-                : "secondary"
-            }
-            onClick={() =>
-              setSelectedFilter(filter)
-            }
-          >
-            {filter}
-          </Button>
-        ))}
+      <div className="mb-8 flex justify-center">
+        <div className="inline-flex flex-wrap items-center gap-2 rounded-xl border border-white/10 bg-zinc-900 p-1.5">
+          {filters.map((filter) => {
+            const Icon = filter.icon;
+
+            const active =
+              selectedFilter === filter.label;
+
+            return (
+              <button
+                key={filter.label}
+                onClick={() =>
+                  setSelectedFilter(filter.label)
+                }
+                className={`relative overflow-hidden rounded-lg px-4 py-2.5 transition-all duration-300 ${
+                  active
+                    ? "text-black"
+                    : "text-slate-300 hover:text-white"
+                }`}
+              >
+                {active && (
+                  <motion.div
+                    layoutId="activeProjectTab"
+                    transition={{
+                      type: "spring",
+                      stiffness: 350,
+                      damping: 28,
+                    }}
+                    className="absolute inset-0 rounded-lg bg-linear-to-r from-[#9EF01A] via-[#70E000] to-[#38BDF8]"
+                  />
+                )}
+
+                <span className="relative z-10 flex items-center gap-2 text-sm font-semibold">
+                  <Icon size={14} />
+                  {filter.label}
+                </span>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
-      {/* Projects */}
+      {/* Project Count */}
 
       <motion.div
-        layout
-        className="grid gap-8 md:grid-cols-2"
+        key={selectedFilter}
+        initial={{
+          opacity: 0,
+          y: 8,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        className="mb-12 text-center text-sm text-slate-300"
       >
-        {filteredProjects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            onOpen={setSelectedProject}
-          />
-        ))}
+        Showing{" "}
+        <span className="font-semibold text-[#9EF01A]">
+          {filteredProjects.length}
+        </span>{" "}
+        {selectedFilter.toLowerCase()}{" "}
+        {filteredProjects.length === 1
+          ? "project"
+          : "projects"}
       </motion.div>
 
-      {/* Modal */}
+      {/* Projects Grid */}
 
-      <ProjectModal
-        open={selectedProject !== null}
-        project={selectedProject}
-        onClose={() =>
-          setSelectedProject(null)
-        }
-      />
-    </div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={selectedFilter}
+          layout
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          exit={{
+            opacity: 0,
+            y: -20,
+          }}
+          transition={{
+            duration: 0.35,
+          }}
+          className="grid grid-cols-1 gap-5 md:grid-cols-3"
+        >
+          {filteredProjects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+            />
+          ))}
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Empty State */}
+
+      {filteredProjects.length === 0 && (
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          className="py-6 text-center"
+        >
+          <div className="mx-auto max-w-md rounded-2xl border border-white/10 bg-zinc-900 p-8">
+            <h3 className="mb-3 text-xl font-bold text-white">
+              No Projects Found
+            </h3>
+
+            <p className="text-slate-400">
+              There are no projects in this category yet.
+            </p>
+          </div>
+        </motion.div>
+      )}
+    </section>
   );
 }

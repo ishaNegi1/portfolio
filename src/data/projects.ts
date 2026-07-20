@@ -8,17 +8,12 @@ const projects: Project[] = [
 
     title: "SpendWise",
 
-    category: "Full Stack",
-
-    featured: true,
+    category: "Featured",
 
     image: "/projects/spendwise.png",
 
     shortDescription:
-      "AI-powered personal finance tracker with spending insights and budgeting.",
-
-    description:
-      "SpendWise is a modern AI-powered personal finance management application that helps users track expenses, manage budgets, visualize spending patterns and receive AI-driven financial suggestions.",
+      "AI-powered personal finance tracker with intelligent budgeting, analytics and AI financial insights.",
 
     techStack: {
       frontend: [
@@ -47,45 +42,6 @@ const projects: Project[] = [
       ],
     },
 
-    features: [
-      {
-        title: "Expense Tracking",
-        description:
-          "Track income and expenses with smart categorization.",
-      },
-
-      {
-        title: "Budget Planner",
-        description:
-          "Create monthly budgets and monitor savings.",
-      },
-
-      {
-        title: "AI Financial Assistant",
-        description:
-          "Ask questions about your expenses using AI.",
-      },
-
-      {
-        title: "Analytics Dashboard",
-        description:
-          "Interactive charts for spending analysis.",
-      },
-    ],
-
-    challenges: [
-      "Managing real-time transaction updates.",
-      "Designing responsive financial charts.",
-      "Optimizing AI prompts.",
-    ],
-
-    futureScope: [
-      "Multi-user collaboration.",
-      "Bank account integration.",
-      "Receipt OCR.",
-      "Investment tracking.",
-    ],
-
     links: {
       github: "",
       live: "",
@@ -99,21 +55,17 @@ const projects: Project[] = [
 
     title: "TripGenie",
 
-    category: "AI",
-
-    featured: true,
+    category: "Featured",
 
     image: "/projects/tripgenie.png",
 
     shortDescription:
-      "AI-powered travel planner with personalized itineraries.",
-
-    description:
-      "TripGenie helps users generate complete travel itineraries based on destination, duration, interests and budget using AI.",
+      "AI-powered travel planner that creates personalized itineraries based on destination, interests and budget.",
 
     techStack: {
       frontend: [
         "Next.js",
+        "React",
         "Tailwind CSS",
       ],
 
@@ -127,40 +79,9 @@ const projects: Project[] = [
 
       tools: [
         "OpenRouter",
-        "Google Maps",
+        "Google Maps API",
       ],
     },
-
-    features: [
-      {
-        title: "AI Itinerary",
-        description:
-          "Generate detailed travel plans instantly.",
-      },
-
-      {
-        title: "Budget Planner",
-        description:
-          "Estimate trip expenses.",
-      },
-
-      {
-        title: "Travel Chatbot",
-        description:
-          "Answer destination-related questions.",
-      },
-    ],
-
-    challenges: [
-      "Prompt engineering.",
-      "Dynamic itinerary generation.",
-    ],
-
-    futureScope: [
-      "Hotel booking.",
-      "Flight integration.",
-      "Weather forecast.",
-    ],
 
     links: {
       github: "",
@@ -175,17 +96,12 @@ const projects: Project[] = [
 
     title: "SustainaBite",
 
-    category: "Full Stack",
-
-    featured: true,
+    category: "Featured",
 
     image: "/projects/sustainabite.png",
 
     shortDescription:
-      "Food donation and waste reduction platform.",
-
-    description:
-      "A MERN application that connects food donors with NGOs and promotes sustainable food management.",
+      "A MERN platform that reduces food waste by connecting food donors with NGOs and charities.",
 
     techStack: {
       frontend: [
@@ -203,40 +119,10 @@ const projects: Project[] = [
       ],
 
       tools: [
-        "Cloudinary",
         "JWT",
+        "Cloudinary",
       ],
     },
-
-    features: [
-      {
-        title: "Food Donation",
-        description:
-          "Donate excess food quickly.",
-      },
-
-      {
-        title: "NGO Dashboard",
-        description:
-          "Manage incoming donations.",
-      },
-
-      {
-        title: "Reward System",
-        description:
-          "Earn points for donations.",
-      },
-    ],
-
-    challenges: [
-      "Authentication.",
-      "Image uploads.",
-    ],
-
-    futureScope: [
-      "Real-time tracking.",
-      "Mobile application.",
-    ],
 
     links: {
       github: "",

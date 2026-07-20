@@ -58,7 +58,7 @@ const socials = [
 
 export default function SocialLinks() {
   return (
-    <div className="mt-6 flex flex-col gap-5 lg:mt-0">
+    <div className="mt-6 flex flex-col sm:gap-5 gap-8 lg:mt-0">
       {socials.map((item, index) => {
         const Icon = item.icon;
 

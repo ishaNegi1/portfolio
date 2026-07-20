@@ -12,9 +12,9 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative my-20 overflow-hidden sm:px-20 px-5 py-12 text-center sm:text-left">
+      <section className="relative mt-20 sm:mb-20 mb-16 overflow-hidden sm:px-20 px-5 py-12 text-center sm:text-left">
 
-        <div className="relative grid items-center gap-20 lg:grid-cols-2">
+        <div className="relative grid items-center gap-20 md:grid-cols-2">
           {/* Left Side */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -76,9 +76,9 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="relative hidden items-center justify-center lg:flex"
+            className="relative items-center justify-center flex"
           >
-            <div className="relative h-130 w-130">
+            <div className="relative sm:h-130 sm:w-130 h-72 w-72">
               {/* Main Glow */}
 <div className="absolute inset-0 rounded-full bg-linear-to-r from-[#9EF01A]/15 via-[#70E000]/10 to-[#38BDF8]/15 blur-[120px]" />
 

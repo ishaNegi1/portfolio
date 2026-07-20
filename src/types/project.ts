@@ -1,32 +1,28 @@
-export interface ProjectLink {
-  github?: string;
-  live?: string;
-}
-
-export interface ProjectFeature {
-  title: string;
-  description: string;
-}
-
-export interface ProjectTechStack {
-  frontend: string[];
-  backend: string[];
-  database: string[];
-  tools: string[];
-}
-
 export interface Project {
   id: number;
-  title: string;
+
   slug: string;
+
+  title: string;
+
+  category:
+    | "Featured"
+    | "Others"
+    | "Team";
+
   image: string;
-  category: string;
+
   shortDescription: string;
-  description: string;
-  techStack: ProjectTechStack;
-  features: ProjectFeature[];
-  challenges: string[];
-  futureScope: string[];
-  links: ProjectLink;
-  featured: boolean;
+
+  techStack: {
+    frontend: string[];
+    backend: string[];
+    database: string[];
+    tools: string[];
+  };
+
+  links: {
+    github?: string;
+    live?: string;
+  };
 }
