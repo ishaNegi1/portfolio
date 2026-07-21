@@ -69,7 +69,7 @@ export default function AssistantModal({
                     AI Portfolio Assistant
                   </h2>
                   <p className="mt-1 text-sm text-slate-300">
-                    Ask anything about Isha Negi
+                    Ask anything about Isha
                   </p>
                 </div>
               </div>

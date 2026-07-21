@@ -41,7 +41,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="sm:px-20 px-5 py-1"
+      className="sm:px-20 px-5 sm:py-2"
     >
       <SectionHeading
         title="Projects"
@@ -51,7 +51,7 @@ export default function Projects() {
       {/* Filter Tabs */}
 
       <div className="mb-8 flex justify-center">
-        <div className="inline-flex flex-wrap items-center gap-2 rounded-xl border border-white/10 bg-zinc-900 p-1.5">
+        <div className="inline-flex flex-wrap items-center gap-1 sm:gap-2 rounded-xl border border-white/10 bg-zinc-900 p-1.5">
           {filters.map((filter) => {
             const Icon = filter.icon;
 
@@ -64,7 +64,7 @@ export default function Projects() {
                 onClick={() =>
                   setSelectedFilter(filter.label)
                 }
-                className={`relative overflow-hidden rounded-lg px-4 py-2.5 transition-all duration-300 ${
+                className={`relative overflow-hidden rounded-lg sm:px-4 px-3 py-2.5 transition-all duration-300 ${
                   active
                     ? "text-black"
                     : "text-slate-300 hover:text-white"
@@ -137,7 +137,7 @@ export default function Projects() {
           transition={{
             duration: 0.35,
           }}
-          className="grid grid-cols-1 gap-5 md:grid-cols-3"
+          className="grid grid-cols-1 gap-5 md:grid-cols-3 pt-3"
         >
           {filteredProjects.map((project) => (
             <ProjectCard
@@ -158,7 +158,7 @@ export default function Projects() {
           animate={{
             opacity: 1,
           }}
-          className="py-6 text-center"
+          className="pt-3 text-center"
         >
           <div className="mx-auto max-w-md rounded-2xl border border-white/10 bg-zinc-900 p-8">
             <h3 className="mb-3 text-xl font-bold text-white">

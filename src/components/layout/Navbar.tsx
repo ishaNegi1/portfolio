@@ -78,7 +78,7 @@ export default function Navbar() {
                 <button
                   key={item.id}
                   onClick={() => handleNavigation(item.id)}
-                  className={`rounded-xl py-3 text-center text-base font-medium transition-all ${active === item.id ? "bg-[#9EF01A]/15 text-[#9EF01A]" : "text-[#CBD5E1] hover:bg-white/5 hover:text-[#38BDF8]"}`}
+                  className={`rounded-xl py-2 text-center text-base font-medium transition-all ${active === item.id ? "bg-[#9EF01A]/15 text-[#9EF01A]" : "text-[#CBD5E1] hover:bg-white/5 hover:text-[#38BDF8]"}`}
                 >
                   {item.label}
                 </button>
