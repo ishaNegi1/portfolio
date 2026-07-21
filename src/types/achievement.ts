@@ -1,11 +1,13 @@
 export interface Achievement {
   id: number;
+
   title: string;
   organization: string;
-  date: string;
+  conference: string;
+  year: string;
+
   description: string;
-  icon: React.ComponentType<{
-    className?: string;
-    size?: number | string;
-  }>;
+
+  certificateImage: string;
+  paperLink?: string;
 }

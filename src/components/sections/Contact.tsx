@@ -86,7 +86,7 @@ export default function Contact() {
     "w-full rounded-2xl border border-white/10 bg-[#18181B] px-4 py-3 text-[#F8FAFC] placeholder:text-[#64748B] outline-none transition-all duration-300 focus:border-[#9EF01A]/50 focus:ring-4 focus:ring-[#9EF01A]/10";
 
   return (
-    <section className="relative overflow-hidden sm:px-20 px-5 py-12 my-20">
+    <section className="relative overflow-hidden sm:px-20 px-5 pb-12 pt-10 my-20">
 
       <div className="relative z-10">
 

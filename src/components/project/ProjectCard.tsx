@@ -24,6 +24,7 @@ export default function ProjectCard({
     ...project.techStack.frontend,
     ...project.techStack.backend,
     ...project.techStack.database,
+    ...project.techStack.tools,
   ];
 
   return (
@@ -36,9 +37,6 @@ export default function ProjectCard({
       whileInView={{
         opacity: 1,
         y: 0,
-      }}
-      whileHover={{
-        y: -4,
       }}
       viewport={{
         once: true,
@@ -73,7 +71,7 @@ export default function ProjectCard({
 
         </div>
 
-        <div className="flex flex-1 flex-col p-5">
+        <div className="flex flex-1 flex-col py-5 px-3">
                   {/* Title */}
 
         <div>
@@ -82,7 +80,7 @@ export default function ProjectCard({
             {project.title}
           </h3>
 
-          <p className="mt-3 line-clamp-2 text-sm leading-6 text-slate-400">
+          <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-300">
             {project.shortDescription}
           </p>
 
@@ -92,7 +90,7 @@ export default function ProjectCard({
 
         <div className="mt-5 flex flex-wrap gap-2">
 
-          {technologies.slice(0, 5).map((tech) => (
+          {technologies.slice(0, 8).map((tech) => (
             <span
               key={tech}
               className="rounded-full border border-white/10 bg-zinc-900 px-2.5 py-1 text-[11px] font-medium text-slate-300 transition-colors duration-300 hover:border-[#9EF01A]/30 hover:text-[#9EF01A]"
@@ -101,7 +99,7 @@ export default function ProjectCard({
             </span>
           ))}
 
-          {technologies.length > 5 && (
+          {technologies.length > 8 && (
             <span className="rounded-full border border-white/10 bg-zinc-900 px-2.5 py-1 text-[11px] font-medium text-slate-400">
               +{technologies.length - 5}
             </span>
@@ -114,7 +112,7 @@ export default function ProjectCard({
         <div className="mt-auto" />
                 {/* Buttons */}
 
-        <div className="mt-5 grid grid-cols-2 gap-2">
+        <div className="mt-2 grid grid-cols-2 gap-2">
 
           {project.links.github ? (
             <a
@@ -125,7 +123,6 @@ export default function ProjectCard({
             >
               <Button
                 size="sm"
-                variant="secondary"
                 className="w-full justify-center"
               >
                 <FaCode className="mr-2" />

@@ -36,11 +36,11 @@ export default function HomePage() {
           <Projects />
         </section>
 
-        {/* <section id="achievements">
+        <section id="achievements">
           <Achievements />
         </section>
 
-        <section id="certificates">
+        {/* <section id="certificates">
           <Certificates />
         </section> */}
 

@@ -1,93 +1,188 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  FaAward,
+  FaUniversity,
+  FaExternalLinkAlt,
+  FaTimes,
+} from "react-icons/fa";
 
-import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
+import Button from "@/components/ui/Button";
+import SectionHeading from "@/components/ui/SectionHeading";
 
 import achievements from "@/data/achievements";
 
 export default function Achievements() {
+  const [selectedCertificate, setSelectedCertificate] = useState<string | null>(
+    null,
+  );
+
   return (
-    <div className="container">
+    <section className="sm:px-20 px-5 my-20 sm:py-12 py-10">
       <SectionHeading
         title="Achievements"
-        subtitle="Milestones that reflect my continuous learning, technical growth and passion for building impactful software."
+        subtitle="Research publications and milestones reflecting my passion for innovation, continuous learning, and solving real-world problems."
       />
 
-      <div className="relative mx-auto max-w-6xl">
-        {/* Timeline Line */}
-        <div className="absolute left-5 top-0 hidden h-full w-0.5 bg-linear-to-b from-blue-500 via-indigo-500 to-purple-500 md:block lg:left-1/2 lg:-translate-x-1/2" />
+      <div className="mx-auto max-w-6xl space-y-12">
+        {achievements.map((achievement, index) => {
 
-        <div className="space-y-12">
-          {achievements.map((achievement, index) => {
-            const Icon = achievement.icon;
-            const isLeft = index % 2 === 0;
+          return (
+            <motion.div
+              key={achievement.id}
+              initial={{
+                opacity: 0,
+                y: 40,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                delay: index * 0.08,
+              }}
+            >
+              <Card className="overflow-hidden p-0">
+                <div className="h-1 bg-linear-to-r from-[#9EF01A] via-[#70E000] to-[#38BDF8]" />
 
-            return (
-              <motion.div
-                key={achievement.id}
-                initial={{
-                  opacity: 0,
-                  y: 40,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.08,
-                }}
-                className={`relative flex flex-col lg:flex-row ${
-                  isLeft ? "" : "lg:flex-row-reverse"
-                } items-center gap-8`}
-              >
-                {/* Card */}
+                <div className="grid gap-8 py-5 px-3 lg:grid-cols-[260px_1fr]">
+                  {/* Certificate */}
 
-                <div className="flex-1 w-full">
-                  <Card className="p-6">
-                    <div className="mb-5 flex items-center gap-4">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-br from-blue-500 to-purple-600 text-2xl text-white">
-                        <Icon />
-                      </div>
+                  <button
+                    className="group relative overflow-hidden rounded-2xl border border-white/10"
+                  >
+                    <Image
+                      src={achievement.certificateImage}
+                      alt="Certificate"
+                      width={260}
+                      height={180}
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  </button>
+
+                  {/* Content */}
+
+                  <div>
+                    <div className="flex items-start gap-4">
 
                       <div>
-                        <h3 className="text-xl font-bold">
+                        <h3 className="text-xl font-bold text-white">
                           {achievement.title}
                         </h3>
 
-                        <p className="text-blue-400">
-                          {achievement.organization}
-                        </p>
+                        <div className="mt-4 flex flex-wrap gap-3">
+                          <div className="flex items-center gap-2 rounded-full border border-[#9EF01A]/20 bg-[#9EF01A]/10 px-3 py-1 text-sm text-[#9EF01A]">
+                            <FaAward />
+                            {achievement.organization}
+                          </div>
+
+                          <div className="flex items-center gap-2 rounded-xl border border-cyan-500/20 bg-cyan-500/10 px-3 py-1 text-sm text-cyan-300">
+                            <FaUniversity />
+                            {achievement.conference}
+                          </div>
+                        </div>
                       </div>
                     </div>
 
-                    <span className="rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-300">
-                      {achievement.date}
-                    </span>
-
-                    <p className="mt-5 leading-7 text-slate-400">
+                    <p className="mt-6 leading-6 text-sm text-slate-300">
                       {achievement.description}
                     </p>
-                  </Card>
+
+                    <div className="mt-8 flex flex-wrap gap-4">
+                      <Button
+                        size="sm"
+                        onClick={() =>
+                          setSelectedCertificate(achievement.certificateImage)
+                        }
+                      >
+                        Certificate
+                      </Button>
+
+                      {achievement.paperLink ? (
+                        <a
+                          href={achievement.paperLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button size="sm" variant="outline">
+                            <FaExternalLinkAlt className="mr-2" />
+                            View Paper
+                          </Button>
+                        </a>
+                      ) : (
+                        <Button
+                          variant="outline"
+                          disabled
+                          className="cursor-not-allowed opacity-70"
+                        >
+                          <FaExternalLinkAlt className="mr-2" />
+                          View Paper
+                        </Button>
+                      )}
+                    </div>
+                  </div>
                 </div>
-
-                {/* Timeline Dot */}
-
-                <div className="z-10 hidden h-5 w-5 rounded-full border-4 border-[#050816] bg-linear-to-r from-blue-500 to-purple-600 lg:block" />
-
-                {/* Empty Side */}
-
-                <div className="hidden flex-1 lg:block" />
-              </motion.div>
-            );
-          })}
-        </div>
+              </Card>
+            </motion.div>
+          );
+        })}
       </div>
-    </div>
+
+      {/* Certificate Modal */}
+
+      <AnimatePresence>
+        {selectedCertificate && (
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+            }}
+            onClick={() => setSelectedCertificate(null)}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-5 backdrop-blur"
+          >
+            <motion.div
+              initial={{
+                scale: 0.9,
+              }}
+              animate={{
+                scale: 1,
+              }}
+              exit={{
+                scale: 0.9,
+              }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-h-[90vh] max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-[#111111]"
+            >
+              <button
+                onClick={() => setSelectedCertificate(null)}
+                className="absolute right-5 top-5 z-20 rounded-full bg-black/50 p-3 text-white transition hover:bg-[#9EF01A] hover:text-black"
+              >
+                <FaTimes />
+              </button>
+
+              <Image
+                src={selectedCertificate}
+                alt="Certificate"
+                width={1200}
+                height={900}
+                className="max-h-[90vh] w-auto object-contain"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
   );
 }

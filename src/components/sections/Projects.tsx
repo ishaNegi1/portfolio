@@ -137,7 +137,7 @@ export default function Projects() {
           transition={{
             duration: 0.35,
           }}
-          className="grid grid-cols-1 gap-5 md:grid-cols-3 pt-3"
+          className="grid grid-cols-1 gap-10 sm:gap-6 md:grid-cols-3 pt-3"
         >
           {filteredProjects.map((project) => (
             <ProjectCard

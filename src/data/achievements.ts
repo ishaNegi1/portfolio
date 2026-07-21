@@ -1,73 +1,48 @@
-import {
-  FaAward,
-  FaMedal,
-  FaUsers,
-  FaFileAlt,
-  FaLaptopCode,
-  FaGraduationCap,
-} from "react-icons/fa";
-
 import { Achievement } from "@/types/achievement";
 
 const achievements: Achievement[] = [
   {
     id: 1,
-    title: "IBM Agentic AI Certification",
-    organization: "IBM SkillsBuild",
-    date: "2025",
+
+    title:
+      "Smart Cities Waste Solution: An IoT-Enabled Public Dustbin with AI-Based Segregation, Self-Cleaning, and Incentivized Recycling",
+
+    organization: "IEEE",
+
+    conference:
+      "5th IEEE International Conference on Information and Communication Technology in Business, Industry and Government (ICTBIG-2025)",
+
+    year: "2025",
+
     description:
-      "Successfully completed IBM's Agentic AI certification focused on AI agents, LLM workflows and modern AI application development.",
-    icon: FaAward,
+      "Published in IEEE Xplore and presented at the 2025 IEEE ICTBIG Conference. The research introduces an AI and IoT-powered Smart Public Dustbin with automated waste segregation, self-cleaning, real-time monitoring, and an incentive-based recycling system for sustainable smart cities.",
+
+    certificateImage: "/certificates/smart-dustbin.png",
+
+    paperLink:
+      "https://ieeexplore.ieee.org/document/11323940",
   },
 
   {
     id: 2,
-    title: "Research Paper Publication",
-    organization: "College Research",
-    date: "2025",
-    description:
-      "Published a research paper on Smart Public Dustbin using Artificial Intelligence and IoT for Smart City waste management.",
-    icon: FaFileAlt,
-  },
 
-  {
-    id: 3,
-    title: "Full Stack Projects",
-    organization: "Personal Projects",
-    date: "2024 - Present",
-    description:
-      "Built multiple full stack applications including SpendWise, SustainaBite, TripGenie and AI-powered solutions.",
-    icon: FaLaptopCode,
-  },
+    title:
+      "NeuroGuardian: A Wearable System for Continuous Monitoring and Real-Time Reporting in ASD Children",
 
-  {
-    id: 4,
-    title: "Academic Excellence",
-    organization: "BCA",
-    date: "2023 - Present",
-    description:
-      "Maintained an excellent academic record throughout the Bachelor's degree.",
-    icon: FaGraduationCap,
-  },
+    organization: "IET",
 
-  {
-    id: 5,
-    title: "Technical Society Member",
-    organization: "College",
-    date: "2023 - Present",
-    description:
-      "Actively participated in technical events, workshops and collaborative development activities.",
-    icon: FaUsers,
-  },
+    conference:
+      "9th IET Smart Cities Symposium (IET SCS 2025)",
 
-  {
-    id: 6,
-    title: "Hackathons & Competitions",
-    organization: "Various",
-    date: "2024 - Present",
+    year: "2025",
+
     description:
-      "Participated in coding competitions, hackathons and innovation challenges to improve practical problem-solving skills.",
-    icon: FaMedal,
+      "Presented at the 9th IET Smart Cities Symposium 2025, Bahrain. The paper proposes NeuroGuardian, an AI and IoT-enabled wearable that combines physiological sensing, geofencing, and real-time monitoring to improve the safety and well-being of children with Autism Spectrum Disorder (ASD).",
+
+    certificateImage: "/certificates/NeuroGuardian.png",
+
+    paperLink:
+      "",
   },
 ];
 

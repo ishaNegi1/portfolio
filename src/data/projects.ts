@@ -32,7 +32,6 @@ const projects: Project[] = [
       tools: [
         "HuggingFace",
         "Chart.js",
-        "Vercel",
       ],
     },
 
@@ -100,7 +99,6 @@ const projects: Project[] = [
       frontend: [
         "React.js",
         "Redux Toolkit",
-        "Axios"
       ],
 
       backend: [
