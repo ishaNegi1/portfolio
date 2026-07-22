@@ -8,6 +8,7 @@ import {
   FaUniversity,
   FaExternalLinkAlt,
   FaTimes,
+  FaImage,
 } from "react-icons/fa";
 
 import Card from "@/components/ui/Card";
@@ -55,7 +56,7 @@ export default function Achievements() {
                 <div className="grid gap-8 py-5 px-3 lg:grid-cols-[260px_1fr]">
                   {/* Certificate */}
 
-                  <button
+                  <div
                     className="group relative overflow-hidden rounded-2xl border border-white/10"
                   >
                     <Image
@@ -65,7 +66,9 @@ export default function Achievements() {
                       height={180}
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     />
-                  </button>
+
+                     <div className="absolute inset-0 bg-linear-to-t from-[#09090B] via-[#09090B]/10 to-transparent" />
+                  </div>
 
                   {/* Content */}
 
@@ -73,7 +76,7 @@ export default function Achievements() {
                     <div className="flex items-start gap-4">
 
                       <div>
-                        <h3 className="text-xl font-bold text-white">
+                        <h3 className=" text-lg font-bold text-white">
                           {achievement.title}
                         </h3>
 
@@ -102,6 +105,7 @@ export default function Achievements() {
                           setSelectedCertificate(achievement.certificateImage)
                         }
                       >
+                        <FaImage className="mr-2" />
                         Certificate
                       </Button>
 

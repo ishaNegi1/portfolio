@@ -54,16 +54,16 @@ export default function ProjectCard({
 
         {/* Image */}
 
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-56 overflow-hidden">
 
           <Image
             src={project.image}
             alt={project.title}
             fill
-            className="object-cover transition duration-500"
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
 
-          <div className="absolute inset-0 bg-linear-to-t from-[#09090B] via-[#09090B]/20 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#09090B] via-[#09090B]/10 to-transparent" />
 
           {/* <div className="absolute left-4 top-4 rounded-full border border-[#9EF01A]/25 bg-[#161616] px-3 py-1.5 text-xs font-semibold text-[#9EF01A]">
             {project.category}

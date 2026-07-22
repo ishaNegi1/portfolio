@@ -1,65 +1,45 @@
 import { Certificate } from "@/types/certificate";
 
 const certificates: Certificate[] = [
-  {
-    id: 1,
-    title: "Agentic AI: From Learner to Builder",
-    issuer: "IBM SkillsBuild",
-    issueDate: "2025",
-    credentialId: "YOUR_CREDENTIAL_ID",
-    image: "/certificates/ibm-agentic-ai.png",
-    credentialUrl: "",
-  },
+
+    {
+  id:1,
+
+  title:"Graphs Camp Participation Certificate",
+
+  issuer:"AlgoUniversity",
+
+  issueDate:"2026",
+
+  image:"/certificates/graph.png",
+},
 
   {
-    id: 2,
-    title: "Web Development Bootcamp",
-    issuer: "Udemy",
-    issueDate: "2024",
-    credentialId: "",
-    image: "/certificates/web-development.png",
-    credentialUrl: "",
-  },
+  id:2,
 
-  {
-    id: 3,
-    title: "React Development",
-    issuer: "Infosys Springboard",
-    issueDate: "2024",
-    credentialId: "",
-    image: "/certificates/react.png",
-    credentialUrl: "",
-  },
+  title:"Agentic AI: From Learner to Builder - Become an AI Agent Architect",
 
-  {
-    id: 4,
-    title: "Java Programming",
-    issuer: "Great Learning",
-    issueDate: "2024",
-    credentialId: "",
-    image: "/certificates/java.png",
-    credentialUrl: "",
-  },
+  issuer:"IBM SkillsBuild",
 
-  {
-    id: 5,
-    title: "Python Programming",
-    issuer: "Great Learning",
-    issueDate: "2024",
-    credentialId: "",
-    image: "/certificates/python.png",
-    credentialUrl: "",
-  },
+  issueDate:"2025",
 
-  {
-    id: 6,
-    title: "SQL & Database",
-    issuer: "Great Learning",
-    issueDate: "2024",
-    credentialId: "",
-    image: "/certificates/sql.png",
-    credentialUrl: "",
-  },
+  image:"/certificates/ibm.png",
+  
+},
+
+{
+  id:3,
+
+  title:"Cyber Security and Ethical Hacking",
+
+  issuer:"Innobuzz",
+
+  issueDate:"2024",
+
+  image:"/certificates/cyber.png",
+  
+},
+
 ];
 
 export default certificates;
