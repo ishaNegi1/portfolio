@@ -8,7 +8,7 @@ export const PORTFOLIO = {
 };
 
 // export const OPENROUTER = {
-//   model: "poolside/laguna-m.1:free",
+//   model: "cohere/north-mini-code:free",
 //   temperature: 0.4,
 //   maxTokens: 800,
 // };

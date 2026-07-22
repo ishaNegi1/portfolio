@@ -61,6 +61,8 @@ Backend
 - Node.js
 - Express.js
 - REST APIs
+- Flask
+- FastAPI
 
 Database
 
@@ -104,6 +106,22 @@ TripGenie - AI-Powered Real-Time Collaborative Travel Planning Platform
 SustainaBite - Saving Food, Serving Hope
 
 NutriSense - AI-Powered Nutrition and Wellness Tracking Platform
+
+====================
+
+Education
+
+Graduation From:
+Vivekananda Institute of Professional Studies | Technical Campus
+BCA 
+CGPA: 9.4
+
+Schooling From:
+Titiksha Public School
+
+Graphs Camp Participation
+
+====================
 
 ====================
 

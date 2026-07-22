@@ -11,7 +11,7 @@ export async function askOpenRouter(systemPrompt: string, userPrompt: string) {
     },
 
     body: JSON.stringify({
-      model: "poolside/laguna-m.1:free",
+      model: "cohere/north-mini-code:free",
 
       messages: [
         {
