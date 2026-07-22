@@ -63,7 +63,7 @@ export default function ProjectCard({
             className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
 
-          <div className="absolute inset-0 bg-linear-to-t from-[#09090B] via-[#09090B]/10 to-transparent" />
+          {/* <div className="absolute inset-0 bg-linear-to-t from-[#09090B] via-[#09090B]/10 to-transparent" /> */}
 
           {/* <div className="absolute left-4 top-4 rounded-full border border-[#9EF01A]/25 bg-[#161616] px-3 py-1.5 text-xs font-semibold text-[#9EF01A]">
             {project.category}

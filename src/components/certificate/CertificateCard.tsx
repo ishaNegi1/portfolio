@@ -44,7 +44,7 @@ export default function CertificateCard({
             className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
 
-          <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent" />
         </div>
 
         {/* Content */}
