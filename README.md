@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<b><h1>🌐 Personal Portfolio</h1></b>
 
-## Getting Started
+<p>
+  A modern, responsive, and interactive portfolio showcasing my projects, technical skills,
+  research publications, certifications, and achievements as a Full Stack Developer.
+</p>
 
-First, run the development server:
+<hr />
+<b><h2>🌐 Live Demo</h2></b>
+👉 
+  <a href="https://isha-negi.vercel.app/" target="_blank">
+    Click Here
+  </a>
+to visit the live website.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<hr />
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<b><h2>✨ Features</h2></b>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<ul>
+  <li>🎨 Modern & Responsive UI</li>
+  <li>🌙 Dark Theme</li>
+  <li>⚡ Smooth Animations with Framer Motion</li>
+  <li>🤖 AI-Powered Portfolio Assistant</li>
+  <li>📂 Interactive Project Showcase</li>
+  <li>🏆 Research Publications & Achievements</li>
+  <li>📜 Certifications Section</li>
+  <li>💻 Categorized Technical Skills</li>
+  <li>📬 Contact Form with Email Integration</li>
+  <li>📱 Mobile-Friendly Design</li>
+</ul>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<hr />
 
-## Learn More
+<b><h2>🛠️ Tech Stack</h2></b>
 
-To learn more about Next.js, take a look at the following resources:
+<h3>Frontend</h3>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<ul>
+  <li>Next.js</li>
+  <li>React</li>
+  <li>TypeScript</li>
+  <li>Tailwind CSS</li>
+  <li>Framer Motion</li>
+</ul>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<h3>Backend</h3>
 
-## Deploy on Vercel
+<ul>
+  <li>Next.js API Routes</li>
+</ul>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<h3>AI</h3>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<ul>
+  <li>OpenRouter API</li>
+</ul>
+
+<h3>Deployment</h3>
+
+<ul>
+  <li>Vercel</li>
+</ul>
+
+<hr />
+
+<b><h2>📂 Project Structure</h2></b>
+
+<pre>
+src/
+│
+├── app/
+├── components/
+├── data/
+├── hooks/
+├── lib/
+├── styles/
+├── types/
+└── proxy.ts/
+</pre>
+
+<hr />
+
+<b><h2>📬 Contact</h2></b>
+
+<p>If you'd like to collaborate or connect, feel free to reach out.</p>
+
+<ul>
+  <li>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ishanegi1">LinkedIn Profile</a></li>
+  <li>💻 <strong>GitHub:</strong> <a href="https://github.com/ishaNegi1">GitHub Profile</a></li>
+  <li>📧 <strong>Email:</strong> negi.isha98@gmail.com</li>
+</ul>
+
+<hr />
+
+<b><h2>⭐ Support</h2></b>
+
+<p>
+If you found this project helpful or inspiring, consider giving it a ⭐ on GitHub.
+It motivates me to build and share more projects!
+</p>
