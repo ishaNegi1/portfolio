@@ -280,7 +280,7 @@ export default function About() {
 
 {/* JOURNEY */}
 
-<div className=" mt-24 sm:mt-28">
+{/* <div className=" mt-24 sm:mt-28">
 
   <motion.div
     initial={{
@@ -315,7 +315,6 @@ export default function About() {
 
   <div className="relative mx-auto mt-20 max-w-6xl">
 
-  {/* Vertical Line */}
 
   <div className="absolute left-5 top-0 h-full w-0.5 bg-linear-to-b from-[#9EF01A] via-[#70E000] to-[#38BDF8] md:left-1/2 md:-translate-x-1/2" />
 
@@ -346,11 +345,8 @@ export default function About() {
         } gap-8`}
       >
 
-        {/* Empty Side */}
 
         <div className="hidden md:block md:flex-1" />
-
-        {/* Timeline Node */}
 
         <div className="absolute left-5 z-20 -translate-x-1/2 md:left-1/2">
 
@@ -362,8 +358,6 @@ export default function About() {
 
         </div>
 
-        {/* Card */}
-
         <div className="ml-14 flex-1 md:ml-0">
 
           <Card
@@ -372,7 +366,6 @@ export default function About() {
             className="group relative overflow-hidden p-5"
           >
 
-            {/* Hover Glow */}
 
             <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-[#9EF01A]/5 blur-[120px] transition-all duration-500 group-hover:bg-[#9EF01A]/10" />
 
@@ -380,7 +373,6 @@ export default function About() {
 
             <div className="relative">
 
-              {/* Year */}
 
               <span className="inline-flex rounded-full border border-[#9EF01A]/20 bg-[#9EF01A]/10 px-4 py-2 text-sm font-semibold text-[#9EF01A]">
 
@@ -388,7 +380,6 @@ export default function About() {
 
               </span>
 
-              {/* Title */}
 
               <h4 className="mt-3 text-xl font-bold text-white transition-colors duration-300 group-hover:text-[#9EF01A]">
 
@@ -396,9 +387,7 @@ export default function About() {
 
               </h4>
 
-              {/* Divider */}
-
-              {/* Description */}
+            
 
               <p className="leading-8 text-slate-300 mt-2">
 
@@ -418,7 +407,7 @@ export default function About() {
   </div>
 </div>
 
-</div>
+</div> */}
 
 </section>
  );
