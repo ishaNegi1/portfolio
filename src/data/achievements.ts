@@ -1,8 +1,31 @@
 import { Achievement } from "@/types/achievement";
 
 const achievements: Achievement[] = [
-  {
+
+   {
     id: 1,
+
+    title:
+      "NeuroGuardian: A Wearable System for Continuous Monitoring and Real-Time Reporting in ASD Children",
+
+    organization: "IET",
+
+    conference:
+      "9th IET Smart Cities Symposium (IET SCS 2025)",
+
+    year: "2026",
+
+    description:
+      "Presented at the 9th IET Smart Cities Symposium 2025 held at the University of Bahrain. The paper proposes NeuroGuardian, an AI and IoT-enabled wearable that combines physiological sensing, geofencing, and real-time monitoring to improve the safety and well-being of children with Autism Spectrum Disorder (ASD).",
+
+    certificateImage: "/certificates/NeuroGuardian.png",
+
+    paperLink:
+      "https://digital-library.theiet.org/doi/abs/10.1049/icp.2026.2497",
+  },
+
+  {
+    id: 2,
 
     title:
       "Smart Cities Waste Solution: An IoT-Enabled Public Dustbin with AI-Based Segregation, Self-Cleaning, and Incentivized Recycling",
@@ -23,27 +46,6 @@ const achievements: Achievement[] = [
       "https://ieeexplore.ieee.org/document/11323940",
   },
 
-  {
-    id: 2,
-
-    title:
-      "NeuroGuardian: A Wearable System for Continuous Monitoring and Real-Time Reporting in ASD Children",
-
-    organization: "IET",
-
-    conference:
-      "9th IET Smart Cities Symposium (IET SCS 2025)",
-
-    year: "2025",
-
-    description:
-      "Presented at the 9th IET Smart Cities Symposium 2025, Bahrain. The paper proposes NeuroGuardian, an AI and IoT-enabled wearable that combines physiological sensing, geofencing, and real-time monitoring to improve the safety and well-being of children with Autism Spectrum Disorder (ASD).",
-
-    certificateImage: "/certificates/NeuroGuardian.png",
-
-    paperLink:
-      "",
-  },
 ];
 
 export default achievements;
