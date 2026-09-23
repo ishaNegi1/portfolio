@@ -4,7 +4,7 @@ export const PORTFOLIO = {
   tagline:
     "Building scalable, responsive and AI-powered applications using modern technologies.",
   location: "Delhi, India",
-  resume: "https://drive.google.com/file/d/1eWE_yc-hwQ7HinC9oqIVoBAu9blX8DqB/view?usp=drivesdk",
+  resume: "https://drive.google.com/file/d/1kV4D9qPjcNPLkefxtNeG3XkG-q2LgOEQ/view?usp=drive_link",
 };
 
 // export const OPENROUTER = {
